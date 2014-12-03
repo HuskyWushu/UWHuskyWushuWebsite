@@ -7,14 +7,14 @@ body {
 
 /* ======= Header ======= */
 .header {
-    opacity: .9;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 10px 0;
-    background: #fff;
     z-index: 9999;
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
+
 .header h1.logo {
     margin-top: 7px;
     margin-bottom: 0;
