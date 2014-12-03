@@ -1,72 +1,51 @@
-/*#events *{*/
-    /*margin: 0px;*/
-    /*padding: 0;*/
-/*}*/
-
-/*#events {*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-
-#events .slide {
-    background-attachment: fixed;
-    width: 100%;
+.events {
+    margin:0;
+    padding:0;
+    perspective: 1px;
+    transform-style: preserve-3d;
     height: 100%;
+    overflow-x: hidden;
+}
+
+.events  .slide {
     position: relative;
+    padding: 25vh 10%;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
 }
 
-#events #slide1{
-    /*background-color: blueviolet;*/
-    background-image: url("../img/sakura_con.JPG");
-    background-size: cover;
+.events .slide, .slide:before {
+    background: 50% 50% / cover;
 }
 
-#events #slide2{
-    /*background-color: #b33921;*/
+.events  .slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+}
+
+.events  #slide1 {
+    background-image: url("../img/sakura_con.jpg");
+    background-attachment: fixed;
+}
+
+.events  #slide2 {
     background-image: url("../img/lunar_new_year.jpg");
-    background-size: cover;
+    background-attachment: fixed;
 }
-#events #slide3{
-    /*background-color: #1aaf5d;*/
+
+.events  #slide3 {
     background-image: url("../img/SIMAC.png");
-    background-size: cover;
+    background-attachment: fixed;
 }
-#events #slide4{
-    /*background-color: #775c93;*/
+
+.events  #slide4 {
     background-image: url("../img/wushu_collegiates.jpg");
-    background-size: cover;
-}
-
-#events p {
-    top: 300px;
-    position: relative;
-}
-
-#events #navEvents{
-    width: 50px;
-    height: 165px;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    margin-top: -82.5px;
-    z-index:1;
-    list-style: none;
-}
-
-#events #navEvents li{
-    width: 15px;
-    height: 15px;
-    background-color: ghostwhite;
-    border: 5px solid ghostwhite;
-    margin: 12.5px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition-duration: 0.7s;
-    -webkit-transition-duration: 0.7s;
-}
-
-#events #navEvents li:hover, #navBar .current{
-    transition-duration: 0.7s;
-    -webkit-transition-duration: 0.7s;
-    background-color: transparent;
+    background-attachment: fixed;
 }

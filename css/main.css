@@ -82,12 +82,12 @@ footer {
     margin-right: 0;
 }
 
-#content {
-    overflow: scroll;
-}
-
 .footer {
     background: #444444;
     color: #fff;
     padding: 15px 0;
+}
+
+.container-fluid {
+    padding: 0;
 }
