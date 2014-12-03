@@ -7,7 +7,7 @@
     overflow-x: hidden;
 }
 
-.events .content {
+.events .description {
     float: right;
     background-image: url("../img/rice_paper.jpg");
     opacity: 0.7;
