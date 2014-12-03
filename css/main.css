@@ -1,11 +1,4 @@
 
-footer {
-    background-color: #FC892F;
-    border-top: 5px solid #EC791F;
-    font-size: 80%;
-    text-align: right;
-}
-
 /* ======= Header ======= */
 .header {
     padding: 10px 0;
@@ -82,10 +75,11 @@ footer {
     margin-right: 0;
 }
 
+
 .footer {
-    background: #444444;
-    color: #fff;
-    padding: 15px 0;
+    background-color: #bd25fc;
+    font-size: 80%;
+    text-align: right;
 }
 
 .container-fluid {
