@@ -1,205 +1,191 @@
-/*
- * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
- *
- * Uses the built in easing capabilities added In jQuery 1.1
- * to offer multiple easing options
- *
- * TERMS OF USE - jQuery Easing
- * 
- * Open source under the BSD License. 
- * 
- * Copyright © 2008 George McGinley Smith
- * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
- * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
- * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
- * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
- * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
- * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
- *
-*/
+!function () {
+    function e(e, r) {
+        return [].slice.call((r || document).querySelectorAll(e))
+    }
 
-// t: current time, b: begInnIng value, c: change In value, d: duration
-jQuery.easing['jswing'] = jQuery.easing['swing'];
+    if (window.addEventListener) {
+        var r = window.StyleFix = {
+            link: function (e) {
+                try {
+                    if ("stylesheet" !== e.rel || e.hasAttribute("data-noprefix"))return
+                } catch (t) {
+                    return
+                }
+                var n, i = e.href || e.getAttribute("data-href"), a = i.replace(/[^\/]+$/, ""), o = (/^[a-z]{3,10}:/.exec(a) || [""])[0], s = (/^[a-z]{3,10}:\/\/[^\/]+/.exec(a) || [""])[0], l = /^([^?]*)\??/.exec(i)[1], u = e.parentNode, p = new XMLHttpRequest;
+                p.onreadystatechange = function () {
+                    4 === p.readyState && n()
+                }, n = function () {
+                    var t = p.responseText;
+                    if (t && e.parentNode && (!p.status || p.status < 400 || p.status > 600)) {
+                        if (t = r.fix(t, !0, e), a) {
+                            t = t.replace(/url\(\s*?((?:"|')?)(.+?)\1\s*?\)/gi, function (e, r, t) {
+                                return /^([a-z]{3,10}:|#)/i.test(t) ? e : /^\/\//.test(t) ? 'url("' + o + t + '")' : /^\//.test(t) ? 'url("' + s + t + '")' : /^\?/.test(t) ? 'url("' + l + t + '")' : 'url("' + a + t + '")'
+                            });
+                            var n = a.replace(/([\\\^\$*+[\]?{}.=!:(|)])/g, "\\$1");
+                            t = t.replace(RegExp("\\b(behavior:\\s*?url\\('?\"?)" + n, "gi"), "$1")
+                        }
+                        var i = document.createElement("style");
+                        i.textContent = t, i.media = e.media, i.disabled = e.disabled, i.setAttribute("data-href", e.getAttribute("href")), u.insertBefore(i, e), u.removeChild(e), i.media = e.media
+                    }
+                };
+                try {
+                    p.open("GET", i), p.send(null)
+                } catch (t) {
+                    "undefined" != typeof XDomainRequest && (p = new XDomainRequest, p.onerror = p.onprogress = function () {
+                    }, p.onload = n, p.open("GET", i), p.send(null))
+                }
+                e.setAttribute("data-inprogress", "")
+            }, styleElement: function (e) {
+                if (!e.hasAttribute("data-noprefix")) {
+                    var t = e.disabled;
+                    e.textContent = r.fix(e.textContent, !0, e), e.disabled = t
+                }
+            }, styleAttribute: function (e) {
+                var t = e.getAttribute("style");
+                t = r.fix(t, !1, e), e.setAttribute("style", t)
+            }, process: function () {
+                e("style").forEach(StyleFix.styleElement), e("[style]").forEach(StyleFix.styleAttribute)
+            }, register: function (e, t) {
+                (r.fixers = r.fixers || []).splice(void 0 === t ? r.fixers.length : t, 0, e)
+            }, fix: function (e, t, n) {
+                for (var i = 0; i < r.fixers.length; i++)e = r.fixers[i](e, t, n) || e;
+                return e
+            }, camelCase: function (e) {
+                return e.replace(/-([a-z])/g, function (e, r) {
+                    return r.toUpperCase()
+                }).replace("-", "")
+            }, deCamelCase: function (e) {
+                return e.replace(/[A-Z]/g, function (e) {
+                    return "-" + e.toLowerCase()
+                })
+            }
+        };
+        !function () {
+            setTimeout(function () {
+            }, 10), document.addEventListener("DOMContentLoaded", StyleFix.process, !1)
+        }()
+    }
+}(), function (e) {
+    function r(e, r, n, i, a) {
+        if (e = t[e], e.length) {
+            var o = RegExp(r + "(" + e.join("|") + ")" + n, "gi");
+            a = a.replace(o, i)
+        }
+        return a
+    }
 
-jQuery.extend( jQuery.easing,
-{
-	def: 'easeOutQuad',
-	swing: function (x, t, b, c, d) {
-		//alert(jQuery.easing.default);
-		return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
-	},
-	easeInQuad: function (x, t, b, c, d) {
-		return c*(t/=d)*t + b;
-	},
-	easeOutQuad: function (x, t, b, c, d) {
-		return -c *(t/=d)*(t-2) + b;
-	},
-	easeInOutQuad: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t + b;
-		return -c/2 * ((--t)*(t-2) - 1) + b;
-	},
-	easeInCubic: function (x, t, b, c, d) {
-		return c*(t/=d)*t*t + b;
-	},
-	easeOutCubic: function (x, t, b, c, d) {
-		return c*((t=t/d-1)*t*t + 1) + b;
-	},
-	easeInOutCubic: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t*t + b;
-		return c/2*((t-=2)*t*t + 2) + b;
-	},
-	easeInQuart: function (x, t, b, c, d) {
-		return c*(t/=d)*t*t*t + b;
-	},
-	easeOutQuart: function (x, t, b, c, d) {
-		return -c * ((t=t/d-1)*t*t*t - 1) + b;
-	},
-	easeInOutQuart: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
-		return -c/2 * ((t-=2)*t*t*t - 2) + b;
-	},
-	easeInQuint: function (x, t, b, c, d) {
-		return c*(t/=d)*t*t*t*t + b;
-	},
-	easeOutQuint: function (x, t, b, c, d) {
-		return c*((t=t/d-1)*t*t*t*t + 1) + b;
-	},
-	easeInOutQuint: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
-		return c/2*((t-=2)*t*t*t*t + 2) + b;
-	},
-	easeInSine: function (x, t, b, c, d) {
-		return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
-	},
-	easeOutSine: function (x, t, b, c, d) {
-		return c * Math.sin(t/d * (Math.PI/2)) + b;
-	},
-	easeInOutSine: function (x, t, b, c, d) {
-		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
-	},
-	easeInExpo: function (x, t, b, c, d) {
-		return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
-	},
-	easeOutExpo: function (x, t, b, c, d) {
-		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
-	},
-	easeInOutExpo: function (x, t, b, c, d) {
-		if (t==0) return b;
-		if (t==d) return b+c;
-		if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
-		return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
-	},
-	easeInCirc: function (x, t, b, c, d) {
-		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
-	},
-	easeOutCirc: function (x, t, b, c, d) {
-		return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
-	},
-	easeInOutCirc: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
-		return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
-	},
-	easeInElastic: function (x, t, b, c, d) {
-		var s=1.70158;var p=0;var a=c;
-		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-		if (a < Math.abs(c)) { a=c; var s=p/4; }
-		else var s = p/(2*Math.PI) * Math.asin (c/a);
-		return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-	},
-	easeOutElastic: function (x, t, b, c, d) {
-		var s=1.70158;var p=0;var a=c;
-		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-		if (a < Math.abs(c)) { a=c; var s=p/4; }
-		else var s = p/(2*Math.PI) * Math.asin (c/a);
-		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-	},
-	easeInOutElastic: function (x, t, b, c, d) {
-		var s=1.70158;var p=0;var a=c;
-		if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
-		if (a < Math.abs(c)) { a=c; var s=p/4; }
-		else var s = p/(2*Math.PI) * Math.asin (c/a);
-		if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-		return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
-	},
-	easeInBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158;
-		return c*(t/=d)*t*((s+1)*t - s) + b;
-	},
-	easeOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158;
-		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
-	},
-	easeInOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158; 
-		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
-		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
-	},
-	easeInBounce: function (x, t, b, c, d) {
-		return c - jQuery.easing.easeOutBounce (x, d-t, 0, c, d) + b;
-	},
-	easeOutBounce: function (x, t, b, c, d) {
-		if ((t/=d) < (1/2.75)) {
-			return c*(7.5625*t*t) + b;
-		} else if (t < (2/2.75)) {
-			return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
-		} else if (t < (2.5/2.75)) {
-			return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
-		} else {
-			return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
-		}
-	},
-	easeInOutBounce: function (x, t, b, c, d) {
-		if (t < d/2) return jQuery.easing.easeInBounce (x, t*2, 0, c, d) * .5 + b;
-		return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
-	}
-});
+    if (window.StyleFix && window.getComputedStyle) {
+        var t = window.PrefixFree = {
+            prefixCSS: function (e, n) {
+                var i = t.prefix;
+                if (t.functions.indexOf("linear-gradient") > -1 && (e = e.replace(/(\s|:|,)(repeating-)?linear-gradient\(\s*(-?\d*\.?\d*)deg/gi, function (e, r, t, n) {
+                        return r + (t || "") + "linear-gradient(" + (90 - n) + "deg"
+                    })), e = r("functions", "(\\s|:|,)", "\\s*\\(", "$1" + i + "$2(", e), e = r("keywords", "(\\s|:)", "(\\s|;|\\}|$)", "$1" + i + "$2$3", e), e = r("properties", "(^|\\{|\\s|;)", "\\s*:", "$1" + i + "$2:", e), t.properties.length) {
+                    var a = RegExp("\\b(" + t.properties.join("|") + ")(?!:)", "gi");
+                    e = r("valueProperties", "\\b", ":(.+?);", function (e) {
+                        return e.replace(a, i + "$1")
+                    }, e)
+                }
+                return n && (e = r("selectors", "", "\\b", t.prefixSelector, e), e = r("atrules", "@", "\\b", "@" + i + "$1", e)), e = e.replace(RegExp("-" + i, "g"), "-"), e = e.replace(/-\*-(?=[a-z]+)/gi, t.prefix)
+            }, property: function (e) {
+                return (t.properties.indexOf(e) ? t.prefix : "") + e
+            }, value: function (e) {
+                return e = r("functions", "(^|\\s|,)", "\\s*\\(", "$1" + t.prefix + "$2(", e), e = r("keywords", "(^|\\s)", "(\\s|$)", "$1" + t.prefix + "$2$3", e)
+            }, prefixSelector: function (e) {
+                return e.replace(/^:{1,2}/, function (e) {
+                    return e + t.prefix
+                })
+            }, prefixProperty: function (e, r) {
+                var n = t.prefix + e;
+                return r ? StyleFix.camelCase(n) : n
+            }
+        };
+        !function () {
+            var e = {}, r = [], n = getComputedStyle(document.documentElement, null), i = document.createElement("div").style, a = function (t) {
+                if ("-" === t.charAt(0)) {
+                    r.push(t);
+                    var n = t.split("-"), i = n[1];
+                    for (e[i] = ++e[i] || 1; n.length > 3;) {
+                        n.pop();
+                        var a = n.join("-");
+                        o(a) && -1 === r.indexOf(a) && r.push(a)
+                    }
+                }
+            }, o = function (e) {
+                return StyleFix.camelCase(e)in i
+            };
+            if (n.length > 0)for (var s = 0; s < n.length; s++)a(n[s]); else for (var l in n)a(StyleFix.deCamelCase(l));
+            var u = {uses: 0};
+            for (var p in e) {
+                var f = e[p];
+                u.uses < f && (u = {prefix: p, uses: f})
+            }
+            t.prefix = "-" + u.prefix + "-", t.Prefix = StyleFix.camelCase(t.prefix), t.properties = [];
+            for (var s = 0; s < r.length; s++) {
+                var l = r[s];
+                if (0 === l.indexOf(t.prefix)) {
+                    var c = l.slice(t.prefix.length);
+                    o(c) || t.properties.push(c)
+                }
+            }
+            "Ms" != t.Prefix || "transform"in i || "MsTransform"in i || !("msTransform"in i) || t.properties.push("transform", "transform-origin"), t.properties.sort()
+        }(), function () {
+            function e(e, r) {
+                return i[r] = "", i[r] = e, !!i[r]
+            }
 
-/*
- *
- * TERMS OF USE - EASING EQUATIONS
- * 
- * Open source under the BSD License. 
- * 
- * Copyright © 2001 Robert Penner
- * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
- * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
- * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
- * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
- * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
- * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
- *
- */
+            var r = {
+                "linear-gradient": {property: "backgroundImage", params: "red, teal"},
+                calc: {property: "width", params: "1px + 5%"},
+                element: {property: "backgroundImage", params: "#foo"},
+                "cross-fade": {property: "backgroundImage", params: "url(a.png), url(b.png), 50%"}
+            };
+            r["repeating-linear-gradient"] = r["repeating-radial-gradient"] = r["radial-gradient"] = r["linear-gradient"];
+            var n = {
+                initial: "color",
+                "zoom-in": "cursor",
+                "zoom-out": "cursor",
+                box: "display",
+                flexbox: "display",
+                "inline-flexbox": "display",
+                flex: "display",
+                "inline-flex": "display",
+                grid: "display",
+                "inline-grid": "display",
+                "min-content": "width"
+            };
+            t.functions = [], t.keywords = [];
+            var i = document.createElement("div").style;
+            for (var a in r) {
+                var o = r[a], s = o.property, l = a + "(" + o.params + ")";
+                !e(l, s) && e(t.prefix + l, s) && t.functions.push(a)
+            }
+            for (var u in n) {
+                var s = n[u];
+                !e(u, s) && e(t.prefix + u, s) && t.keywords.push(u)
+            }
+        }(), function () {
+            function r(e) {
+                return a.textContent = e + "{}", !!a.sheet.cssRules.length
+            }
+
+            var n = {
+                ":read-only": null,
+                ":read-write": null,
+                ":any-link": null,
+                "::selection": null
+            }, i = {keyframes: "name", viewport: null, document: 'regexp(".")'};
+            t.selectors = [], t.atrules = [];
+            var a = e.appendChild(document.createElement("style"));
+            for (var o in n) {
+                var s = o + (n[o] ? "(" + n[o] + ")" : "");
+                !r(s) && r(t.prefixSelector(s)) && t.selectors.push(o)
+            }
+            for (var l in i) {
+                var s = l + " " + (i[l] || "");
+                !r("@" + s) && r("@" + t.prefix + s) && t.atrules.push(l)
+            }
+            e.removeChild(a)
+        }(), t.valueProperties = ["transition", "transition-property"], e.className += " " + t.prefix, StyleFix.register(t.prefixCSS)
+    }
+}(document.documentElement);
