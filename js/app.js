@@ -5,7 +5,7 @@
 "use strict";
 
 $(document).ready(function() {
-    //initial
+    $('#content').load('home.html');
 
     //handle menu clicks
     $('ul#nav li a').click(function() {
@@ -13,8 +13,6 @@ $(document).ready(function() {
         $('#content').load(page + '.html');
         return false;
     });
-
-
 //    document.getElementById("navBar").innerHTML =
 //        "<ul id='menu'>" +
 //        "<li><a href='index.html'>Home</a></li>" +
