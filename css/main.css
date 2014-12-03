@@ -25,6 +25,7 @@ body {
 
 .header h1.logo .logo-title {
     vertical-align: middle;
+    color: #4b2e83;
 }
 .header .main-nav button {
     background: #0b2c2c;
@@ -41,20 +42,15 @@ body {
 .header .main-nav button:focus {
     outline: none;
 }
-.header .main-nav button .icon-bar {
-    background-color: #fff;
-}
+
 .header .main-nav .nav .nav-item {
     font-weight: normal;
     text-transform: uppercase;
     margin-right: 5px;
 }
-.header .main-nav .nav .nav-item.active a {
-    color: #28a5a8;
-    background: none;
-}
+
 .header .main-nav .nav .nav-item a {
-    color: #444444;
+    color: #4b2e83;
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
@@ -62,23 +58,15 @@ body {
     font-size: 14px;
     padding: 15px 10px;
 }
+
 .header .main-nav .nav .nav-item a:hover {
-    color: #28a5a8;
+    color: #b7a57a ;
     background: none;
 }
+
 .header .main-nav .nav .nav-item a:focus {
     outline: none;
     background: none;
-}
-.header .main-nav .nav .nav-item a:active {
-    outline: none;
-    background: none;
-}
-.header .main-nav .nav .nav-item.active {
-    color: #28a5a8;
-}
-.header .main-nav .nav .nav-item.last {
-    margin-right: 0;
 }
 
 .footer {
