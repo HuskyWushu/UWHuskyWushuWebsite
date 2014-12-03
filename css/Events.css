@@ -1,47 +1,48 @@
-*{
-    margin: 0px;
-    padding: 0;
-}
+/*#events *{*/
+    /*margin: 0px;*/
+    /*padding: 0;*/
+/*}*/
 
-html, body {
-    width: 100%;
-    height: 100%;
-}
+/*#events {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
 
-.slide {
+#events .slide {
     background-attachment: fixed;
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-#slide1{
+#events #slide1{
     /*background-color: blueviolet;*/
     background-image: url("../img/sakura_con.JPG");
     background-size: cover;
 }
-#slide2{
+
+#events #slide2{
     /*background-color: #b33921;*/
     background-image: url("../img/lunar_new_year.jpg");
     background-size: cover;
 }
-#slide3{
+#events #slide3{
     /*background-color: #1aaf5d;*/
     background-image: url("../img/SIMAC.png");
     background-size: cover;
 }
-#slide4{
+#events #slide4{
     /*background-color: #775c93;*/
     background-image: url("../img/wushu_collegiates.jpg");
     background-size: cover;
 }
 
-p {
+#events p {
     top: 300px;
-    position: absolute;
+    position: relative;
 }
 
-#navEvents{
+#events #navEvents{
     width: 50px;
     height: 165px;
     position: fixed;
@@ -51,7 +52,8 @@ p {
     z-index:1;
     list-style: none;
 }
-#navEvents li{
+
+#events #navEvents li{
     width: 15px;
     height: 15px;
     background-color: ghostwhite;
@@ -62,7 +64,8 @@ p {
     transition-duration: 0.7s;
     -webkit-transition-duration: 0.7s;
 }
-#navEvents li:hover, #navBar .current{
+
+#events #navEvents li:hover, #navBar .current{
     transition-duration: 0.7s;
     -webkit-transition-duration: 0.7s;
     background-color: transparent;

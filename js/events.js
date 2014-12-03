@@ -4,13 +4,18 @@
 
 "use strict";
 
-jQuery(document).ready(function ($){
-   $(window).stellar();
+$(document).ready(function ($){
+    $.stellar('refresh');
+
+    $('#content').stellar({
+        horizontalScrolling: false,
+        verticalOffset: 150
+    });
 
     var links = $('#navigation').find('li');
     var slide = $('.slide');
-    var myWindow = $(window);
-    var htmlbody = $('html,body');
+    var myWindow = $('#content');
+    var htmlbody = $('html, body');
     var dataslide;
 
     slide.waypoint(function (event, direction) {
