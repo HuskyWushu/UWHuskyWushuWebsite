@@ -18,9 +18,9 @@ $(document).ready(function() {
 //    document.getElementById("navBar").innerHTML =
 //        "<ul id='menu'>" +
 //        "<li><a href='index.html'>Home</a></li>" +
-//        "<li><a href='History.html'>History</a></li>" +
-//        "<li><a href='Events.html'>Events</a></li>" +
-//        "<li><a href='Gallery.html'>Gallery</a></li>" +
+//        "<li><a href='history.html'>History</a></li>" +
+//        "<li><a href='events.html'>Events</a></li>" +
+//        "<li><a href='gallery.html'>Gallery</a></li>" +
 //        "</ul>";
 ////document.getElementById("trademark").innerHTML =
 ////    ""
