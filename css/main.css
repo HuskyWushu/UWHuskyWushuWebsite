@@ -7,6 +7,7 @@ body {
 
 /* ======= Header ======= */
 .header {
+    opacity: .9;
     padding: 10px 0;
     background: #fff;
     z-index: 9999;
@@ -78,6 +79,7 @@ body {
     padding: 0;
     width: 100%;
     text-align: center;
+    background-color: #4b2e83;
 }
 
 .container-fluid {
