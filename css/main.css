@@ -82,3 +82,8 @@ footer {
     margin-right: 0;
 }
 
+.footer {
+    background: #444444;
+    color: #fff;
+    padding: 15px 0;
+}
