@@ -80,6 +80,8 @@
     text-align: right;
 }
 
-.container-fluid {
+#content {
     padding: 0;
+    width: 100%;
+    text-align: center;
 }
