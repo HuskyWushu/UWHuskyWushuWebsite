@@ -4,17 +4,17 @@
 
 "use strict";
 
-$(document).ready(function ($){
+function isVisible (){
     $.stellar('refresh');
 
-    $('#content').stellar({
+    $('#events').stellar({
         horizontalScrolling: false,
         verticalOffset: 150
     });
 
     var links = $('#navigation').find('li');
     var slide = $('.slide');
-    var myWindow = $('#content');
+    var myWindow = $('#events');
     var htmlbody = $('html, body');
     var dataslide;
 
@@ -46,5 +46,10 @@ $(document).ready(function ($){
         dataslide = $(this).attr('data-slide');
         goToByScroll(dataslide);
     });
-});
+}
 
+$('#events').bind('isVisible', isVisible());
+
+$('#events').show('slow', function(){
+    $(this).trigger('isVisible');
+});
