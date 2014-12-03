@@ -5,12 +5,21 @@
 "use strict";
 
 $(document).ready(function() {
+    //reveal homepage
+    $('#content').css("display", "none");
     $('#content').load('home.html');
+    $('#content').fadeIn(2000);
+
     $('#headerPlaceholder').height($('#navigationBar').outerHeight());
     //handle menu clicks
     $('#main-nav ul.nav li a').click(function() {
-        var page = $(this).attr('href');
-        $('#content').load(page + '.html');
+        var contentDiv = $('#content');
+        contentDiv.load($(this).attr('href') + '.html', function() {
+            contentDiv.hide().fadeIn(500);
+        });
+
         return false;
     });
+
+
 });
