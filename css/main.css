@@ -1,25 +1,3 @@
-ul#menu {
-    padding: 0;
-    margin-bottom: 11px;
-}
-
-ul#menu li {
-    display: inline;
-    margin-right: 3px;
-}
-
-ul#menu li a {
-    background-color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #696969;
-    border-radius: 4px 4px 0 0;
-}
-
-ul#menu li a:hover {
-    color: white;
-    background-color: black;
-}
 
 footer {
     background-color: #FC892F;
@@ -28,16 +6,24 @@ footer {
     text-align: right;
 }
 
-
 /* ======= Header ======= */
 .header {
-    padding: 15px 0;
+    padding: 10px 0;
     background: #fff;
     z-index: 9999;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
+.header h1.logo {
+    margin-top: 7px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 28px;
+    max-height: 50px;
+}
+
 .header h1.logo .logo-title {
     vertical-align: middle;
 }
@@ -95,3 +81,4 @@ footer {
 .header .main-nav .nav .nav-item.last {
     margin-right: 0;
 }
+
