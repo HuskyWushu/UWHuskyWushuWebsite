@@ -7,7 +7,7 @@ body {
 
 /* ======= Header ======= */
 .header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
     padding: 10px 0;
     z-index: 9999;
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
