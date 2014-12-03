@@ -5,6 +5,7 @@
     transform-style: preserve-3d;
     height: 100%;
     overflow-x: hidden;
+    position: fixed;
 }
 
 .events .description {
@@ -45,17 +46,18 @@
     background-attachment: fixed;
 }
 
-.events #slide2 {
+.events #slide2:before {
     background-image: url("../img/lunar_new_year.jpg");
-    background-attachment: fixed;
-}
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;}
 
 .events #slide3 {
     background-image: url("../img/SIMAC.png");
     background-attachment: fixed;
 }
 
-.events #slide4 {
+.events #slide4:before {
     background-image: url("../img/wushu_collegiates.jpg");
-    background-attachment: fixed;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
 }
