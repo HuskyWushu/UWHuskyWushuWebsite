@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
     $('#content').load('home.html');
-    $('#headerPlaceholder').height( $('#navigationBar').outerHeight());
+    $('#headerPlaceholder').height($('#navigationBar').outerHeight());
     //handle menu clicks
     $('#main-nav ul.nav li a').click(function() {
         var page = $(this).attr('href');
