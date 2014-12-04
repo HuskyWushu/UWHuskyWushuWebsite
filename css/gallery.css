@@ -2,7 +2,16 @@
     visibility: hidden;
 }
 
-.photo {
+#content {
+    background-color: #ffffff;
+}
+
+#albumYears{
+    display: inline-block;
+    position: fixed;
+}
+
+img {
     max-width: 250px;
     border: 10px solid #DDD;
     margin-right: 1em;
@@ -11,7 +20,7 @@
     transition: all 0.5s;
 }
 
-.photo:hover {
-    webkit-transform: scale(1.5, 1.5);
+img:hover {
+    /* -webkit-transform: scale(1.5, 1.5) ; for safari */
     transform: scale(1.5, 1.5);
 }
