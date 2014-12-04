@@ -86,12 +86,12 @@
 }
 
 .history #slide3:before {
-    background-image: url("../img/banner1.jpg");
+    background-image: url("../img/HuskyWushuTeam.jpg");
     transform: translateZ(-1px) scale(2);
     z-index: -1;
 }
 
 .history #slide4 {
-    background-image: url("../img/800pxbanner.jpg");
+    background-image: url("../img/shaolinTemple.jpg");
     background-attachment: fixed;
 }
