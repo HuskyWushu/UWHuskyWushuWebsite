@@ -1,5 +1,5 @@
 #content {
-    background: url("../img/wushu_collegiates.jpg") 50% 50% / cover;
+    background: url("../img/wushuHome.jpg") 50% 50% / cover;
 }
 
 #wushuDescription {
@@ -13,7 +13,6 @@
     -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-    justify-content: space-around;
 }
 
 .col-md-6 {
