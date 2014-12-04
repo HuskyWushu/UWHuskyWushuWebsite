@@ -58,6 +58,9 @@ $(document).ready(function () {
         else {
             $(this).addClass("enlarged");
         }
+        $('html, body').animate({
+            scrollTop: $(this).offset().top
+        }, 2000);
     });
 });
 
