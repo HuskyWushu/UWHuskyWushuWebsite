@@ -44,7 +44,13 @@
 
 /*===== Events ===== */
 .events .slide {
-    min-height: 100vh;
+    min-height: 120vh;
+}
+
+.events img {
+    width: 50%;
+    height: 50%;
+    padding: 1em;
 }
 
 .events #slide1:before {
@@ -86,13 +92,13 @@
 }
 
 .history #slide3:before {
-    background-image: url("../img/banner1.jpg");
+    background-image: url("../img/GalleryImages/2012/img8.jpg");
     transform: translateZ(-1px) scale(2);
     z-index: -1;
 }
 
 .history #slide4 {
-    background-image: url("../img/800pxbanner.jpg");
+    background-image: url("../img/GalleryImages/2012/img4.jpg");
     background-attachment: fixed;
     min-height: 140vh;
 }
