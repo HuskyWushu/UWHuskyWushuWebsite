@@ -8,11 +8,9 @@
 
 .home {
     width: 75%;
-    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgba(255, 255, 255, 0.9);
-    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 .col-md-6 {
@@ -22,7 +20,7 @@
     padding-top: 1em;
 }
 
-.btn {
+.btn, .btn:focus {
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -30,6 +28,7 @@
     background: #4b2e83;
     color: #ffffff;
 }
+
 .btn:hover, .btn:active {
     background: #b7a57a;
     color: #ffffff;
