@@ -2,6 +2,10 @@
     background: url("../img/wushu_collegiates.jpg") 50% 50% / cover;
 }
 
+#wushuDescription {
+    line-height: 3em;
+}
+
 .home {
     width: 75%;
     display: inline-block;
@@ -9,15 +13,14 @@
     -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-}
-
-#promoVideo {
-    padding-top: 25px;
-    text-align: center;
+    justify-content: space-around;
 }
 
 .col-md-6 {
-    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 .btn {
