@@ -48,5 +48,8 @@ $(document).ready(function () {
     $('#showAllButton').click(function () {
         $(".gallery").removeClass("hidden");
     });
+    $('').click(function () {
+        $(".gallery").removeClass("hidden");
+    });
 });
 
