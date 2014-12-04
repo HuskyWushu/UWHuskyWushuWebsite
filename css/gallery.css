@@ -1,10 +1,17 @@
-.photo {
-    max-height: 400px;
+.hidden {
+    visibility: hidden;
+}
+
+img {
+    max-width: 200px;
     border: 10px solid #DDD;
     margin-right: 1em;
     margin-bottom: 1em;
     border-radius: 5px;
+    transition: all 0.5s;
 }
-.hidden {
-    visibility: hidden;
+
+img:hover {
+    /* -webkit-transform: scale(1.5, 1.5) ; for safari */
+    transform: scale(1.5, 1.5);
 }
