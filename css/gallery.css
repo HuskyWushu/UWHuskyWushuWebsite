@@ -2,6 +2,15 @@
     visibility: hidden;
 }
 
+#content {
+    background-color: #ffffff;
+}
+
+#albumYears{
+    display: inline-block;
+    position: fixed;
+}
+
 img {
     max-width: 250px;
     border: 10px solid #DDD;
