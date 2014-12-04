@@ -3,21 +3,27 @@
 }
 
 #wushuDescription {
-    line-height: 3em;
+    line-height: 2em;
 }
 
 .home {
     width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
     background-color: rgba(255, 255, 255, 0.9);
+    padding: 1em;
 }
 
-.col-md-6 {
-    padding-left: 2em;
-    padding-right: 2em;
+.homepagePhoto {
+    height: 400px;
+    width: 300px;
+    padding: 1em;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.row {
     padding-bottom: 1em;
-    padding-top: 1em;
 }
 
 .btn, .btn:focus {
