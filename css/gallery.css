@@ -7,8 +7,8 @@
 }
 
 #albumYears{
-    display: inline-block;
     position: fixed;
+    horiz-align: center;
 }
 
 .photo {
