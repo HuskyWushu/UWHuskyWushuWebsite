@@ -45,5 +45,8 @@ $(document).ready(function () {
         $("#2012").addClass("hidden");
         $("#2013").addClass("hidden");
     });
+    $('#showAllButton').click(function () {
+        $(".gallery").removeClass("hidden");
+    });
 });
 

@@ -1,5 +1,6 @@
 img {
-    width: 400px;
+    max-height: 400px;
+    min-width: 300px;
 }
 .hidden {
     visibility: hidden;
