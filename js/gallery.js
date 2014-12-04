@@ -4,7 +4,7 @@
     $(document).ready(function() {
         var img = "../img/GalleryImages/2012";
         var fileextension = [".png", ".jpg"];
-        $(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () {
+        var imagesDisplayed = $(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () {
             $.ajax({
                 //This will retrieve the contents of the folder if the folder is configured as 'browsable'
                 url: dir,
@@ -21,7 +21,7 @@
         var gallery = $('#gallery');
         var row = $(document.createElement('div'));
         var img;
-        _.forEach(tilePairs, function(tile, elemIndex) {
+        _.forEach(imagesDisplayed, (elemIndex) {
             if(elemIndex > 0 && 0 == elemIndex % 4) {
                 gallery.append(row);
                 row = $(document.createElement('div'));
