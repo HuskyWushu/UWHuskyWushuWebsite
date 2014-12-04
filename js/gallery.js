@@ -53,7 +53,7 @@ $(document).ready(function () {
     });
     $('.photo').click(function(){
         if($(this).hasClass("enlarged")) {
-            $(this).removeClass("enlarged");;
+            $(this).removeClass("enlarged");
         }
         else {
             $(this).addClass("enlarged");
