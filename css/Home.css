@@ -22,6 +22,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
+.row {
+    padding-bottom: 1em;
+}
+
 .btn, .btn:focus {
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
