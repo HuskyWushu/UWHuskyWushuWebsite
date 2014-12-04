@@ -21,6 +21,11 @@
     transition: all 0.5s;
 }
 
+.enlarged {
+    max-width: 800px;
+    horiz-align: center;
+}
+
 .photo:hover {
     /* -webkit-transform: scale(1.5, 1.5) ; for safari */
     transform: scale(1.5, 1.5);

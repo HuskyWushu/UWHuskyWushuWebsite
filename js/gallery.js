@@ -51,5 +51,14 @@ $(document).ready(function () {
     $('').click(function () {
         $(".gallery").removeClass("hidden");
     });
+    $('.photo').click(function(){
+        if($(this).hasClass("enlarged")) {
+            $(this).removeClass("enlarged");;
+        }
+        else {
+            $(this).addClass("enlarged");
+        }
+    });
 });
+
 
