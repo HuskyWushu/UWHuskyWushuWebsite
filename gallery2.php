@@ -1,9 +1,9 @@
 <link rel="stylesheet" type="text/css" href="css/gallery.css">
 <section class="row" id="albumYears">
-    <button id="showAllButton">Show All</button>
-    <button id="button2012">2012</button>
-    <button id="button2013">2013</button>
-    <button id="button2014">2014</button>
+        <button id="showAllButton">Show All</button>
+        <button id="button2012">2012</button>
+        <button id="button2013">2013</button>
+        <button id="button2014">2014</button>
 </section>
 
 <!--<div class="gallery" id="2012">-->
