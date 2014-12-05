@@ -36,7 +36,7 @@
 <!--</div>-->
 <?php
 date_default_timezone_set("Europe/Copenhagen");
-$folder = 'img/2012';
+$folder = 'img/GalleryImages/2012';
 $filetype = '*.*';
 $files = glob($folder.$filetype);
 $count = count($files);
