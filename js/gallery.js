@@ -45,5 +45,24 @@ $(document).ready(function () {
         $("#2012").addClass("hidden");
         $("#2013").addClass("hidden");
     });
+    $('#showAllButton').click(function () {
+        $(".gallery").removeClass("hidden");
+    });
+    $('').click(function () {
+        $(".gallery").removeClass("hidden");
+    });
+    //to Scroll
+    $('.photo').click(function(){
+        if($(this).hasClass("enlarged")) {
+            $(this).removeClass("enlarged");
+        }
+        else {
+            $(this).addClass("enlarged");
+        }
+        $('html, body').animate({
+            scrollTop: $(this).offset().top
+        }, 100);
+    });
 });
+
 
