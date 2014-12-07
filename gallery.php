@@ -35,7 +35,7 @@
 <!--    <img src="img/GalleryImages/2014/img6.jpg" alt="a picture" class="photo">-->
 <!--</div>-->
 <?php
-date_default_timezone_set("Europe/Copenhagen");
+//date_default_timezone_set("Europe/Copenhagen");
 $folder = 'img/GalleryImages/2012';
 $filetype = '*.*';
 $files = glob($folder.$filetype);
