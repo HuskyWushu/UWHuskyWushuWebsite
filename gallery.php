@@ -40,7 +40,7 @@ $folder = 'img/GalleryImages/2012';
 $filetype = '*.*';
 $files = glob($folder.$filetype);
 $count = count($files);
-
+echo($count);
 $sortedArray = array();
 for ($i = 0; $i < $count; $i++) {
     $sortedArray[date ('YmdHis', filemtime($files[$i])) . $i] = $files[$i];
