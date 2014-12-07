@@ -63,6 +63,10 @@ html, body {
 
 /*===== Small Size =====*/
 @media (max-width: 992px) {
+    .events img {
+        padding: 5px;
+    }
+
     .events #slide1 {
         background-color: #4b2e83;
         background-size: cover;
@@ -140,10 +144,9 @@ html, body {
 
     .description {
         float: right;
-        background: rgba(255, 255, 255, 0.8) fixed;
-        margin-top: 10%;
-        margin-left: 35%;
-        margin-right: 10%;
+        background-color: rgba(255, 255, 255, 0.8);
+        background-attachment: fixed;
+        margin: 10vh;
         width: 50%;
         padding: 5%;
         border-radius: 5px;
@@ -223,6 +226,7 @@ html, body {
     }
 
     .events #slide1 {
+        margin-top: 10vh;
         background-image: url("../img/sakura_con.JPG");
         background-size: cover;
     }
@@ -244,6 +248,7 @@ html, body {
 
     /*===== History =====*/
     .history #slide1 {
+        margin-top: 10vh;
         background-image: url("../img/2000px-China_blank_map.svg.png");
         background-size: cover;
     }
