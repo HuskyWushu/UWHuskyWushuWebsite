@@ -72,10 +72,11 @@ body {
 }
 
 #content {
-    padding: 0;
-    width: 100%;
-    text-align: center;
-}
+     padding: 0;
+     width: 100%;
+     text-align: center;
+     background-color: #4b2e83;
+ }
 
 .container-fluid {
     padding: 0;
