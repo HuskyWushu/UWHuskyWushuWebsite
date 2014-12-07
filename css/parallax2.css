@@ -161,7 +161,7 @@
 }
 
 .home #slide1 {
-    background-image: url("../img/homeBackground.jpg");
+    background-image: url("../img/background.jpg");
     background-attachment: fixed;
     min-height: 100vh;
 }

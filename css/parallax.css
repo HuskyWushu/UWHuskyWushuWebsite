@@ -131,7 +131,7 @@ html, body {
     }
 
     .home #slide1 {
-        background-image: url("../img/homeBackground.jpg");
+        background-image: url("../img/background.jpg");
         background-size: cover;
     }
 
