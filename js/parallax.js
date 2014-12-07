@@ -21,7 +21,7 @@ jQuery(document).ready(function ($){
         } else {
             $('#navigation li[data-slide="' + dataslide +'"]').addClass('current')
         }
-    });
+    }, {offset: 50});
 
     myWindow.scroll(function() {
         if(myWindow.scrollTop() == 0) {
@@ -32,7 +32,7 @@ jQuery(document).ready(function ($){
 
     function goToByScroll(dataslide) {
         htmlbody.animate({
-            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
+            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top - 75
         }, 1000, 'easeInOutExpo');
     }
 
