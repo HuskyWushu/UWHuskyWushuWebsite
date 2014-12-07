@@ -1,61 +1,64 @@
-
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/home.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/parallax2.css">
-    <meta charset="UTF-8">
+    <head lang="en">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
 
-    <title>Events</title>
-</head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/parallax.css">
 
-<body>
-<div id="head"></div>
-<div class="home parallax">
-    <div class="row slide" id="slide1">
-        <img src="img/homeimg2.jpg" alt="WushuPic2" class="homepagePhoto"/>
-        <img src="img/homeimg3.jpg" alt="WushuPic3" class="homepagePhoto"/>
-        <img src="img/homeimg1.jpg" alt="WushuPic1" class="homepagePhoto"/>
-    </div>
+        <meta charset="UTF-8">
 
-    <div class="slide" id="slide2">
-        <div class="description">
-            <h2>What is Wushu?</h2>
-            <p id="wushuDescription">
-                Wushu (武术) is a form of contemporary Chinese martial arts that blends elements of performance and martial application.
-                Wushu training emphasizes quickness, explosive power, and natural, relaxed movement.
-                Wushu combines flexibility with strength, speed with flawless technique, and
-                fierce intent with effortless execution.
-            </p>
+        <title>Events</title>
+    </head>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <p>
-                    <h2>Upcoming Events!</h2>
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <h2>When Do We Meet?</h2>
-                    <p>Monday: 8:30 PM to 10:00 PM</p>
-                    <p>Wednesday: 8:30 PM to 10:00 PM</p>
-                    <p>Friday: 3:30 PM to 5:30 PM</p>
-                </div>
+    <div id="head"></div>
+
+    <body class="home">
+        <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.3">
+            <div data-stellar-ratio="0.7" data-stellar-vertical-offset="-450" class="homepagePhotoGroup">
+                <img src="img/homeimg2.jpg" alt="WushuPic2" class="homepagePhoto"/>
+                <img src="img/homeimg3.jpg" alt="WushuPic3" class="homepagePhoto"/>
+                <img src="img/homeimg1.jpg" alt="WushuPic1" class="homepagePhoto"/>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <a class="btn btn-lg" href="https://www.facebook.com/groups/8403088050/">Find us on Facebook!</a>
+        <div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.3">
+            <div class="description">
+                <h2>What is Wushu?</h2>
+                <p>
+                    Wushu (武术) is a form of contemporary Chinese martial arts that blends elements of performance and martial application.
+                    Wushu training emphasizes quickness, explosive power, and natural, relaxed movement.
+                    Wushu combines flexibility with strength, speed with flawless technique, and
+                    fierce intent with effortless execution.
+                </p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                        <h2>Upcoming Events!</h2>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>When Do We Meet?</h2>
+                        <p>Monday: 8:30 PM to 10:00 PM</p>
+                        <p>Wednesday: 8:30 PM to 10:00 PM</p>
+                        <p>Friday: 3:30 PM to 5:30 PM</p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <a class="btn btn-lg" href="mailto:uwwushu@u.washington.edu">Send us an email!</a>
+
+                <div class="row" id="contactButtons">
+                    <div class="col-md-6">
+                        <a class="btn btn-lg" href="https://www.facebook.com/groups/8403088050/">Find us on Facebook!</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="btn btn-lg" href="mailto:uwwushu@u.washington.edu">Send us an email!</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>

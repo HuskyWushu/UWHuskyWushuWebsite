@@ -1,5 +1,5 @@
 *{
-    margin: 0px;
+    margin: 0;
     padding: 0;
 }
 
@@ -30,6 +30,64 @@ html, body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
 }
 
+/*===== Home =====*/
+.homepagePhoto {
+    height: 400px;
+    width: 300px;
+    padding: 1em;
+    display: inline-block;
+}
+
+.homepagePhotoGroup {
+    text-align: center;
+    padding: 5%;
+}
+
+.btn, .btn:focus {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    background: #4b2e83;
+    color: #ffffff;
+}
+
+.btn:hover, .btn:active {
+    background: #b7a57a;
+    color: #ffffff;
+}
+
+.home #contactButtons {
+    padding: 1em;
+}
+
+.home .description {
+    text-align: center;
+    background-color: rgba(255,255,255, 0.8);
+    background-attachment: fixed;
+    width: 75%;
+    padding: 5%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.home .row {
+    margin: 0;
+}
+
+.home #slide1{
+    background-image: url("../img/homeBackground.jpg");
+    background-size: cover;
+}
+
+.home #slide2{
+    background-image: url("../img/homeBackground2.jpg");
+    background-size: cover;
+}
+
+/*===== Events =====*/
 #navEvents{
     width: 50px;
     height: 165px;
@@ -56,8 +114,6 @@ html, body {
     -webkit-transition-duration: 0.7s;
     background-color: #b7a57a;
 }
-
-/*===== Events =====*/
 
 .events #slide1{
     background-image: url("../img/sakura_con.JPG");
@@ -88,19 +144,17 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    height: auto;
 }
 
 .events #logo2, #logo4 {
-    height: auto;
     width: 25%;
 }
 
 .events #logo1 {
-    height: auto;
     width: 40%;
 }
 
 .events #logo3 {
-    height: auto;
     width: 50%;
 }
