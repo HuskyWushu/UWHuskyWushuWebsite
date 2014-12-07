@@ -4,6 +4,8 @@
 
 "use strict";
 
+var dataslide;
+
 jQuery(document).ready(function ($){
     $(window).stellar();
 
@@ -11,7 +13,6 @@ jQuery(document).ready(function ($){
     var slide = $('.slide');
     var myWindow = $(window);
     var htmlbody = $('html,body');
-    var dataslide;
 
     slide.waypoint(function (event, direction) {
         dataslide = $(this).attr('data-slide');
