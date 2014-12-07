@@ -37,10 +37,11 @@
 <?php
 //date_default_timezone_set("Europe/Copenhagen");
 $folder = 'img/GalleryImages/2012';
-$filetype = '*.*';
-$files = glob($folder.$filetype);
+//$filetype = '*.*';
+//$files = glob(trim($folder).trim($filetype));;
+$files = glob($folder);
 $count = count($files);
-
+echo($count);
 $sortedArray = array();
 for ($i = 0; $i < $count; $i++) {
     $sortedArray[date ('YmdHis', filemtime($files[$i])) . $i] = $files[$i];
