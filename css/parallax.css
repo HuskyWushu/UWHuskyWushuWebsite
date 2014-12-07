@@ -1,3 +1,4 @@
+/*===== All Sizes =====*/
 *{
     margin: 0;
     padding: 0;
@@ -13,126 +14,6 @@ html, body {
     width: 100%;
     height: 100%;
     position: relative;
-}
-
-.description {
-    float: right;
-    background-color: rgba(255,255,255, 0.8);
-    background-attachment: fixed;
-    margin-top: 10%;
-    margin-left: 35%;
-    margin-right: 10%;
-    width: 50%;
-    padding: 5%;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-}
-
-/*===== Home =====*/
-.homepagePhoto {
-    height: 400px;
-    width: 300px;
-    padding: 1em;
-    display: inline-block;
-}
-
-.homepagePhotoGroup {
-    text-align: center;
-    padding: 5%;
-}
-
-.btn, .btn:focus {
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    background: #4b2e83;
-    color: #ffffff;
-}
-
-.btn:hover, .btn:active {
-    background: #b7a57a;
-    color: #ffffff;
-}
-
-.home #contactButtons {
-    padding: 1em;
-}
-
-.home .description {
-    text-align: center;
-    background-color: rgba(255,255,255, 0.8);
-    width: 75%;
-    padding: 3%;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-}
-
-.home #slide1{
-    background-image: url("../img/homeBackground.jpg");
-    background-size: cover;
-}
-
-.home #slide2{
-    background-image: url("../img/homeBackground2.jpg");
-    background-size: cover;
-}
-
-/*===== Events =====*/
-#navEvents{
-    width: 50px;
-    height: 165px;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    margin-top: -82.5px;
-    z-index:1;
-    list-style: none;
-}
-#navEvents li{
-    width: 15px;
-    height: 15px;
-    background-color: #ffffff;
-    border: 5px #4b2e83;
-    margin: 12.5px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition-duration: 0.7s;
-    -webkit-transition-duration: 0.7s;
-}
-#navEvents li:hover, #navBar .current{
-    transition-duration: 0.7s;
-    -webkit-transition-duration: 0.7s;
-    background-color: #b7a57a;
-}
-
-.events #slide1{
-    background-image: url("../img/sakura_con.JPG");
-    background-size: cover;
-}
-
-.events #slide2{
-    background-image: url("../img/lunar_new_year.jpg");
-    background-size: cover;
-}
-
-.events #slide3{
-    background-image: url("../img/SIMAC.png");
-    background-size: cover;
-}
-
-.events #slide4{
-    background-image: url("../img/wushu_collegiates.jpg");
-    background-size: cover;
-}
-
-.events h2 {
-    text-align: center;
-    margin-bottom: 3%;
 }
 
 .events img {
@@ -154,28 +35,184 @@ html, body {
     width: 50%;
 }
 
-/*===== History =====*/
-.history #slide1{
-    background-image: url("../img/2000px-China_blank_map.svg.png");
-    background-size: cover;
-}
-
-.history #slide2{
-    background-image: url("../img/Shi_DeRu_and_Shi_DeYang.jpg");
-    background-size: cover;
-}
-
-.history #slide3{
-    background-image: url("../img/GalleryImages/2012/img8.jpg");
-    background-size: cover;
-}
-
-.history #slide4{
-    background-image: url("../img/GalleryImages/2012/img4.jpg");
-    background-size: cover;
-}
-
-.history h2 {
+.events h2 {
     text-align: center;
     margin-bottom: 3%;
+}
+
+/*===== Small Size =====*/
+@media (max-width: 992px) {
+    .events #slide1 {
+        background-color: #4b2e83;
+        background-size: cover;
+        color: #ffffff;
+    }
+
+    .events #slide2 {
+        background-color: #b7a57a;
+        background-size: cover;
+    }
+
+    .events #slide3 {
+        background-color: #4b2e83;
+        background-size: cover;
+        color: #ffffff;
+    }
+
+    .events #slide4 {
+        background-color: #b7a57a;
+        background-size: cover;
+    }
+
+    .events p {
+        padding: 5%;
+        text-align: center;
+    }
+}
+
+/*===== Medium Size =====*/
+@media (min-width: 992px) {
+
+    .description {
+        float: right;
+        background-color: rgba(255, 255, 255, 0.8);
+        background-attachment: fixed;
+        margin-top: 10%;
+        margin-left: 35%;
+        margin-right: 10%;
+        width: 50%;
+        padding: 5%;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    }
+
+    /*===== Home =====*/
+    .homepagePhoto {
+        height: 400px;
+        width: 300px;
+        padding: 1em;
+        display: inline-block;
+    }
+
+    .homepagePhotoGroup {
+        text-align: center;
+        padding: 5%;
+    }
+
+    .btn, .btn:focus {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        background: #4b2e83;
+        color: #ffffff
+    }
+
+    .btn:hover, .btn:active {
+        background: #b7a57a;
+        color: #ffffff;
+    }
+
+    .home #contactButtons {
+        padding: 1em;
+    }
+
+    .home .description {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 75%;
+        padding: 3%;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    }
+
+    .home #slide1 {
+        background-image: url("../img/homeBackground.jpg");
+        background-size: cover;
+    }
+
+    .home #slide2 {
+        background-image: url("../img/homeBackground2.jpg");
+        background-size: cover;
+    }
+
+    /*===== Events =====*/
+    #navEvents {
+        width: 50px;
+        height: 165px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        margin-top: -82.5px;
+        z-index: 1;
+        list-style: none;
+    }
+
+    #navEvents li {
+        width: 15px;
+        height: 15px;
+        background-color: #ffffff;
+        border: 5px #4b2e83;
+        margin: 12.5px;
+        cursor: pointer;
+        border-radius: 20px;
+        transition-duration: 0.7s;
+        -webkit-transition-duration: 0.7s;
+    }
+
+    #navEvents li:hover, #navBar .current {
+        transition-duration: 0.7s;
+        -webkit-transition-duration: 0.7s;
+        background-color: #b7a57a;
+    }
+
+    .events #slide1 {
+        background-image: url("../img/sakura_con.JPG");
+        background-size: cover;
+    }
+
+    .events #slide2 {
+        background-image: url("../img/lunar_new_year.jpg");
+        background-size: cover;
+    }
+
+    .events #slide3 {
+        background-image: url("../img/SIMAC.png");
+        background-size: cover;
+    }
+
+    .events #slide4 {
+        background-image: url("../img/wushu_collegiates.jpg");
+        background-size: cover;
+    }
+
+    /*===== History =====*/
+    .history #slide1 {
+        background-image: url("../img/2000px-China_blank_map.svg.png");
+        background-size: cover;
+    }
+
+    .history #slide2 {
+        background-image: url("../img/Shi_DeRu_and_Shi_DeYang.jpg");
+        background-size: cover;
+    }
+
+    .history #slide3 {
+        background-image: url("../img/GalleryImages/2012/img8.jpg");
+        background-size: cover;
+    }
+
+    .history #slide4 {
+        background-image: url("../img/GalleryImages/2012/img4.jpg");
+        background-size: cover;
+    }
+
+    .history h2 {
+        text-align: center;
+        margin-bottom: 3%;
+    }
 }
