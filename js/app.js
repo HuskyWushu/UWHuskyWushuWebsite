@@ -15,7 +15,7 @@ $(document).ready(function() {
     //handle menu clicks
     $('#main-nav ul.nav li a').click(function() {
         var contentDiv = $('#content');
-        contentDiv.load($(this).attr('href') + '.html', function() {
+        contentDiv.load($(this).attr('href'), function() {
             contentDiv.hide().fadeIn(500);
         });
 

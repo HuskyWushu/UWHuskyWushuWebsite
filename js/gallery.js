@@ -51,6 +51,7 @@ $(document).ready(function () {
     $('').click(function () {
         $(".gallery").removeClass("hidden");
     });
+    //to Scroll
     $('.photo').click(function(){
         if($(this).hasClass("enlarged")) {
             $(this).removeClass("enlarged");
@@ -60,7 +61,7 @@ $(document).ready(function () {
         }
         $('html, body').animate({
             scrollTop: $(this).offset().top
-        }, 500);
+        }, 100);
     });
 });
 
