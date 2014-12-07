@@ -8,6 +8,7 @@
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/gallery.js"></script>
     <link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
@@ -76,7 +77,6 @@ foreach ($sortedArray as $filename) {
 ?>
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>-->
-<script src="js/gallery.js"></script>
 
     </div>
 </div>

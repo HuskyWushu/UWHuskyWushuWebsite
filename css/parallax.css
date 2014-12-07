@@ -104,3 +104,30 @@ html, body {
     height: auto;
     width: 50%;
 }
+
+/*===== History =====*/
+
+.history #slide1{
+    background-image: url("../img/2000px-China_blank_map.svg.png");
+    background-size: cover;
+}
+
+.history #slide2{
+    background-image: url("../img/Shi_DeRu_and_Shi_DeYang.jpg");
+    background-size: cover;
+}
+
+.history #slide3{
+    background-image: url("../img/GalleryImages/2012/img8.jpg");
+    background-size: cover;
+}
+
+.history #slide4{
+    background-image: url("../img/GalleryImages/2012/img4.jpg");
+    background-size: cover;
+}
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 3%;
+}
