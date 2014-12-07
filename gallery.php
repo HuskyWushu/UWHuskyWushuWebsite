@@ -1,4 +1,16 @@
-<link rel="stylesheet" type="text/css" href="css/gallery.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+    <title>Show images in folder</title>
+    <link rel="stylesheet" type="text/css" href="css/gallery.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+
 <section class="row" id="albumYears">
     <button id="showAllButton">Show All</button>
     <button id="button2012">2012</button>
@@ -60,3 +72,9 @@ foreach ($sortedArray as $filename) {
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>-->
 <script src="js/gallery.js"></script>
+
+    </div>
+</div>
+
+</body>
+</html>
