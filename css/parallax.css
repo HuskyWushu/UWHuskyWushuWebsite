@@ -189,7 +189,7 @@ html, body {
     #navEvents li {
         width: 15px;
         height: 15px;
-        background-color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.6);
         border: 5px #4b2e83;
         margin: 12.5px;
         cursor: pointer;
@@ -201,7 +201,7 @@ html, body {
     #navEvents li:hover, #navBar .current {
         transition-duration: 0.7s;
         -webkit-transition-duration: 0.7s;
-        background-color: #b7a57a;
+        background-color: rgba(183, 165, 122, 1);
     }
 
     .events #slide1 {
