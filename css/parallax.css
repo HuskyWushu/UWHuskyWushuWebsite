@@ -1,188 +1,69 @@
-.parallax {
-    margin:0;
-    padding:0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100%;
-    overflow-x: hidden;
-    max-width: 100%;
-    position: fixed;
+*{
+    margin: 0px;
+    padding: 0;
 }
 
-.description {
-    float: right;
-    background-color: rgba(255,255,255, 0.9);
-    background-attachment: fixed;
-    width: 50%;
-    padding: 5%;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 .slide {
-    position: relative;
-    padding: 25vh 10%;
+    background-attachment: fixed;
     width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-    transform-style: inherit;
+    height: 100%;
+    position: relative;
 }
 
-.slide, .slide:before {
-    background: 100% 100% / cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+#slide1{
+    /*background-color: blueviolet;*/
+    background-image: url("../img/sakura_con.JPG");
+    background-size: cover;
+}
+#slide2{
+    /*background-color: #b33921;*/
+    background-image: url("../img/lunar_new_year.jpg");
+    background-size: cover;
+}
+#slide3{
+    /*background-color: #1aaf5d;*/
+    background-image: url("../img/SIMAC.png");
+    background-size: cover;
+}
+#slide4{
+    /*background-color: #775c93;*/
+    background-image: url("../img/wushu_collegiates.jpg");
     background-size: cover;
 }
 
-.slide:before {
-    content: "";
+p {
+    top: 300px;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left:0;
-    right:0;
 }
 
-/*===== Events ===== */
-.events .slide {
-    min-height: 120vh;
-}
-
-.events img {
-    width: 50%;
-    height: 50%;
-    padding: 1em;
-}
-
-.events #slide1:before {
-    background-image: url("../img/sakura_con.JPG");
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.events #slide2 {
-    background-image: url("../img/lunar_new_year.jpg");
-    background-attachment: fixed;
-}
-
-.events #slide3:before {
-    background-image: url("../img/SIMAC.png");
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.events #slide4 {
-    background-image: url("../img/wushu_collegiates.jpg");
-    background-attachment: fixed;
-}
-
-/*===== History =====*/
-.history .slide {
-    min-height: 150vh;
-}
-
-.history #slide1:before {
-    background-image: url("../img/2000px-China_blank_map.svg.png");
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.history #slide2 {
-    background-image: url("../img/Shi_DeRu_and_Shi_DeYang.jpg");
-    background-attachment: fixed;
-}
-
-.history #slide3:before {
-    background-image: url("../img/GalleryImages/2012/img8.jpg");
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.history #slide4 {
-    background-image: url("../img/GalleryImages/2012/img4.jpg");
-    background-attachment: fixed;
-    min-height: 140vh;
-}
-
-/*===== Home =====*/
-
-.home {
-    background-image: url("../img/homeBackground2.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-.home .parallax {
-    margin:0;
-    padding: 5vh;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100%;
-    overflow-x: hidden;
+#navEvents{
+    width: 50px;
+    height: 165px;
     position: fixed;
+    top: 50%;
+    left: 0;
+    margin-top: -82.5px;
+    z-index:1;
+    list-style: none;
 }
-
-.home .slide {
-    position: relative;
-    padding: 5vh 10%;
-    width: 100vw;
-    transform-style: inherit;
-    box-shadow: none;
+#navEvents li{
+    width: 15px;
+    height: 15px;
+    background-color: ghostwhite;
+    border: 5px solid ghostwhite;
+    margin: 12.5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
 }
-
-.homepagePhoto {
-    height: 400px;
-    width: 300px;
-    padding: 1em
-}
-
-.btn, .btn:focus {
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    background: #4b2e83;
-    color: #ffffff;
-}
-
-.btn:hover, .btn:active {
-    background: #b7a57a;
-    color: #ffffff;
-}
-
-.home #slide2:before {
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.home #slide1 {
-    background-image: url("../img/homeBackground.jpg");
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-.home .description {
-    float: right;
-    background-color: rgba(255,255,255, 0.8);
-    background-attachment: fixed;
-    width: 100%;
-    padding: 5vh;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    -webkit-transform: translateZ(-1px) scale(2);
-    -moz-transform: translateZ(-1px) scale(2);
-    -o-transform: translateZ(-1px) scale(2);
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
+#navEvents li:hover, #navBar .current{
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    background-color: transparent;
 }
