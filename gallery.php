@@ -9,6 +9,7 @@
 <!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">-->
 <!--    <script type="text/javascript" src="js/app.js"></script>-->
 <!--    <script src="js/gallery.js"></script>-->
+<!--    agsdagv-->
     <link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
