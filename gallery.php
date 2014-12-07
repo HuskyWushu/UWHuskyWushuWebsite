@@ -36,11 +36,11 @@
 <!--</div>-->
 <?php
 //date_default_timezone_set("Europe/Copenhagen");
-//$filetype = '*.*';
-//$files = glob(trim($folder).trim($filetype));;
-$folder = "/img/GalleryImages/2012/";
-$filepath = glob($folder);
-$files = scandir($folder);
+$filetype = '*.*';
+$folder = 'img/GalleryImages/2012/';
+$files = glob($folder.$filetype);
+$filepath = glob($folder.$filetype);
+//$files = scandir($folder);
 $count = count($files);
 echo("<hr /> <hr /> count =". $count . "<hr />files = " . $files . "<hr />folder =" . $folder . "<hr /> filepath =" .
     var_dump($filepath));
