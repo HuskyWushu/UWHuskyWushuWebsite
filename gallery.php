@@ -20,7 +20,7 @@
 
 <div id="head">
 <div class="container">
-    <div class="row item">
+    <div class="row">
 
 <section class="row" id="albumYears">
     <button id="showAllButton">Show All</button>
@@ -57,6 +57,7 @@
 <!--    <img src="img/GalleryImages/2014/img5.jpg" alt="a picture" class="photo">-->
 <!--    <img src="img/GalleryImages/2014/img6.jpg" alt="a picture" class="photo">-->
 <!--</div>-->
+        <div class="item"></div>
 <?php
 //date_default_timezone_set("Europe/Copenhagen");
 $filetype = '*.*';
@@ -80,6 +81,7 @@ foreach ($sortedArray as $filename) {
     echo '<img src="'.$filename.'" title="' . substr($filename,strlen($folder),strpos($filename, '.')-strlen($folder)) . '" />';
 }
 ?>
+        </div>
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>-->
 
