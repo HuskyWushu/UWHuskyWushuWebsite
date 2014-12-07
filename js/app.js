@@ -9,5 +9,6 @@ $(document).ready(function() {
     $('body').css('overflow','hidden');
     $('#head').load('header.html');
     $('body').hide().fadeIn(500);
+    $('body').css('overflow', 'auto');
 
 });

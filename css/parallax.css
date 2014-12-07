@@ -257,7 +257,6 @@ html, body {
     }
 
     .history #slide1 {
-        margin-top: 10vh;
         background-image: url("../img/2000px-China_blank_map.svg.png");
         background-size: cover;
     }
