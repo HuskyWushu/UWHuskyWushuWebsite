@@ -74,3 +74,8 @@
 .header .main-nav .nav .nav-item.last {
     margin-right: 0;
 }
+
+@media(min-width:768px) {
+    .navbar-collapse {
+        width: auto;
+    }
