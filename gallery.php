@@ -11,7 +11,7 @@
 <!--    <script type="text/javascript" src="js/app.js"></script>-->
 
 <!--    agsdagv-->
-    <link rel="stylesheet" type="text/css" href="css/gallery2.css">
+    <link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
 

@@ -1,6 +1,30 @@
-body {
-    padding: 20px;
-    background: #acacac;
+.hidden {
+    visibility: hidden;
+}
+
+#content {
+    background-color: #ffffff;
+}
+
+#albumYears{
+    display: inline-block;
+    position: fixed;
+    horiz-align: center;
+}
+
+.photo {
+    max-width: 250px;
+    border: 10px solid #DDD;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    transition: all 0.05s;
+}
+
+.enlarged {
+    max-width: 100%;
+    max-height: 100%;
+    horiz-align: center;
 }
 
 .row {
@@ -13,7 +37,7 @@ body {
     width: 100%;
 }
 
-.row img {
+.row .photo {
     display: inline-block; /* Display inline-block, and absolutely NO FLOATS! */
     margin-bottom: 10px;
     width: 100%;
