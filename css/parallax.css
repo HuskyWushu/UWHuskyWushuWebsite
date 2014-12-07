@@ -15,30 +15,19 @@ html, body {
     position: relative;
 }
 
-#slide1{
-    /*background-color: blueviolet;*/
-    background-image: url("../img/sakura_con.JPG");
-    background-size: cover;
-}
-#slide2{
-    /*background-color: #b33921;*/
-    background-image: url("../img/lunar_new_year.jpg");
-    background-size: cover;
-}
-#slide3{
-    /*background-color: #1aaf5d;*/
-    background-image: url("../img/SIMAC.png");
-    background-size: cover;
-}
-#slide4{
-    /*background-color: #775c93;*/
-    background-image: url("../img/wushu_collegiates.jpg");
-    background-size: cover;
-}
-
-p {
-    top: 300px;
-    position: absolute;
+.description {
+    float: right;
+    background-color: rgba(255,255,255, 0.8);
+    background-attachment: fixed;
+    margin-top: 15%;
+    margin-left: 35%;
+    margin-right: 10%;
+    width: 50%;
+    padding: 5%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
 }
 
 #navEvents{
@@ -66,4 +55,37 @@ p {
     transition-duration: 0.7s;
     -webkit-transition-duration: 0.7s;
     background-color: transparent;
+}
+
+/*===== Events =====*/
+
+.events #slide1{
+    background-image: url("../img/sakura_con.JPG");
+    background-size: cover;
+}
+
+.events #slide2{
+    background-image: url("../img/lunar_new_year.jpg");
+    background-size: cover;
+}
+
+.events #slide3{
+    background-image: url("../img/SIMAC.png");
+    background-size: cover;
+}
+
+.events #slide4{
+    background-image: url("../img/wushu_collegiates.jpg");
+    background-size: cover;
+}
+
+.events h2 {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.events img {
+    width: 50%;
+    height: 50%;
+    padding: 1em;
 }
