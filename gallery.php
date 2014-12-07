@@ -7,8 +7,10 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/app.js"></script>
     <script src="js/gallery.js"></script>
+<!--    <script type="text/javascript" src="js/app.js"></script>-->
+
+<!--    agsdagv-->
     <link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
