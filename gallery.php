@@ -38,7 +38,7 @@
 //date_default_timezone_set("Europe/Copenhagen");
 $folder = 'img/GalleryImages/2012';
 $filetype = '*.*';
-$files = glob($folder.$filetype);
+$files = glob(trim($folder).trim($filetype));;
 $count = count($files);
 echo($count);
 $sortedArray = array();
