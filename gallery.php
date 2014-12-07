@@ -4,11 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
     <title>Show images in folder</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/app.js"></script>
-    <script src="js/gallery.js"></script>
+<!--    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+<!--    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
+<!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <script type="text/javascript" src="js/app.js"></script>-->
+<!--    <script src="js/gallery.js"></script>-->
     <link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
