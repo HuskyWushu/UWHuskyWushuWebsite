@@ -8,4 +8,5 @@ $(document).ready(function() {
     //load header
     $('#head').load('header.html');
     $('body').hide().fadeIn(500);
+
 });
