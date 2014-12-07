@@ -42,8 +42,8 @@ $files = glob($folder.$filetype);
 $filepath = glob($folder.$filetype);
 //$files = scandir($folder);
 $count = count($files);
-echo("<hr /> <hr /> count =". $count . "<hr />files = " . $files . "<hr />folder =" . $folder . "<hr /> filepath =" .
-    var_dump($filepath));
+//echo("<hr /> <hr /> count =". $count . "<hr />files = " . $files . "<hr />folder =" . $folder . "<hr /> filepath =" .
+//    var_dump($filepath));
 $sortedArray = array();
 for ($i = 0; $i < $count; $i++) {
     $sortedArray[date ('YmdHis', filemtime($files[$i])) . $i] = $files[$i];
