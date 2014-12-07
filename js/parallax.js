@@ -21,7 +21,7 @@ jQuery(document).ready(function ($){
         } else {
             $('#navigation li[data-slide="' + dataslide +'"]').addClass('current')
         }
-    },{offset:50 });
+    });
 
     myWindow.scroll(function() {
         if(myWindow.scrollTop() == 0) {
