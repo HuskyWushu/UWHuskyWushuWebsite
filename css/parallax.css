@@ -64,17 +64,12 @@ html, body {
 .home .description {
     text-align: center;
     background-color: rgba(255,255,255, 0.8);
-    background-attachment: fixed;
     width: 75%;
-    padding: 5%;
+    padding: 3%;
     border-radius: 5px;
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-}
-
-.home .row {
-    margin: 0;
 }
 
 .home #slide1{
@@ -160,7 +155,6 @@ html, body {
 }
 
 /*===== History =====*/
-
 .history #slide1{
     background-image: url("../img/2000px-China_blank_map.svg.png");
     background-size: cover;
