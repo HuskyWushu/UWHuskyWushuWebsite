@@ -139,8 +139,10 @@ html, body {
     .homepagePhoto {
         max-height: 28%;
         max-width: 21%;
-        padding: 1em;
         display: inline-block;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     }
 
     .homepagePhotoGroup {
