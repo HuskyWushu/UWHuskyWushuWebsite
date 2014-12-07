@@ -36,12 +36,14 @@
 <!--</div>-->
 <?php
 //date_default_timezone_set("Europe/Copenhagen");
-$folder = 'img/GalleryImages/2012';
+$folder = "http://students.washington.edu/jmdevera/UWHuskyWushuWebsite/img/GalleryImages/2012";
 //$filetype = '*.*';
 //$files = glob(trim($folder).trim($filetype));;
-$files = glob($folder);
+$filepath = glob($folder.trim(".jpg"));
+$files = scandir($filepath[0]);
 $count = count($files);
-echo($count);
+echo("<hr /> <hr /> count =". $count . "<hr />files = " . $files . "<hr />folder =" . $folder . "<hr /> filepath =" .
+    var_dump($filepath));
 $sortedArray = array();
 for ($i = 0; $i < $count; $i++) {
     $sortedArray[date ('YmdHis', filemtime($files[$i])) . $i] = $files[$i];
