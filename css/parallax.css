@@ -264,12 +264,12 @@ html, body {
     }
 
     .history #slide3 {
-        background-image: url("../img/GalleryImages/2012/img8.jpg");
+        background-image: url("../gallery-images/img_2012_8.jpg");
         background-size: cover;
     }
 
     .history #slide4 {
-        background-image: url("../img/GalleryImages/2012/img4.jpg");
+        background-image: url("../gallery-images/img_2012_4.jpg");
         background-size: cover;
     }
 
