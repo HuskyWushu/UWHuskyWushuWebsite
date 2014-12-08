@@ -122,6 +122,32 @@ html, body {
         padding: 5%;
         text-align: center;
     }
+
+    .home .centeredDescription {
+        text-align: center;
+    }
+
+    .homepagePhoto {
+        visibility: hidden;
+    }
+
+    .homepagePhotoAlwaysVisible {
+        max-height: 28%;
+        max-width: 21%;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    }
+
+    .home #slide1 {
+        background-color: #4b2e83;
+        background-size: cover;
+    }
+
+    .home #slide2 {
+        background-color: #b7a57a;
+        background-size: cover;
+    }
 }
 
 /*===== Medium Size =====*/
@@ -152,7 +178,7 @@ html, body {
     }
 
     /*===== Home =====*/
-    .homepagePhoto {
+    .homepagePhoto, .homepagePhotoAlwaysVisible {
         max-height: 28%;
         max-width: 21%;
         display: inline-block;
