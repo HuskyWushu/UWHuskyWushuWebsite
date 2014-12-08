@@ -1,4 +1,0 @@
-UWHuskyWushuWebsite
-===================
-
-UWHuskyWushuWebsite
