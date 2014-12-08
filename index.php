@@ -1,3 +1,5 @@
+<script type="text/javascript" src="js/app.js"></script>
+
 <?php
 
     // Include the UberGallery class
