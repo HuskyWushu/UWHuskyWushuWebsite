@@ -41,9 +41,9 @@
 
     function updateEvents() {
         var events = JSON.parse(this.responseText);
-        event1.innerHTML = events.items[0].summary + " " + events.items[0].start.dateTime;
-        event2.innerHTML = events.items[1].summary + " " + events.items[0].start.dateTime;
-        event3.innerHTML = events.items[2].summary + " " + events.items[0].start.dateTime;
+        event1.innerHTML = events.items[0].summary + " : " + events.items[0].start.dateTime.substring(0, 10);
+        event2.innerHTML = events.items[1].summary + " : " + events.items[0].start.dateTime.substring(0, 10);
+        event3.innerHTML = events.items[2].summary + " : " + events.items[0].start.dateTime.substring(0, 10);
     }
 
     function ajaxFailure(exception) {

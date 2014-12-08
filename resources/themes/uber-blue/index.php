@@ -14,7 +14,7 @@
 
     <meta charset="UTF-8">
 
-    <title>MartinisGallery</title>
+    <title>Gallery</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo THEMEPATH; ?>/rebase-min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo THEMEPATH; ?>/style.css" />
@@ -29,9 +29,10 @@
 <body>
 
 <!-- Start UberGallery v<?php echo UberGallery::VERSION; ?> - Copyright (c) <?php echo date('Y'); ?> Chris Kankiewicz (http://www.ChrisKankiewicz.com) -->
+<div id="pad"></div>
 <div id="head"></div>
 <div id="galleryWrapper">
-    <h1>UberGallery</h1>
+    <h1>Gallery</h1>
     <div class="line"></div>
 
     <?php if($gallery->getSystemMessages()): ?>
