@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
+<?php
 
-<link rel="stylesheet" type="text/css" href="resources/UberGallery.css" />
-<link rel="stylesheet" type="text/css" href="resources/colorbox/1/colorbox.css" />
-<script type="text/javascript" src="://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.mi
-n.js"></script>
-<script type="text/javascript" src="resources/colorbox/jquery.colorbox.js"></script>
+    // Include the UberGallery class
+    include('resources/UberGallery.php');
 
-</head>
-<body>
+    // Initialize the UberGallery object
+    $gallery = new UberGallery();
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("a[rel='colorbox']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
-    });
-</script>
+    // Initialize the gallery array
+    $galleryArray = $gallery->readImageDirectory('gallery-images');
 
-<?php include_once('resources/UberGallery.php'); $gallery = UberGallery::init()->createGallery('/gallery-images'); ?>
+    // Define theme path
+    if (!defined('THEMEPATH')) {
+        define('THEMEPATH', $gallery->getThemePath());
+    }
 
-    </body>
-</html>
+    // Set path to theme index
+    $themeIndex = $gallery->getThemePath(true) . '/gallery.php';
+
+    // Initialize the theme
+    if (file_exists($themeIndex)) {
+        include($themeIndex);
+    } else {
+        die('ERROR: Failed to initialize theme');
+    }
+
+?>
