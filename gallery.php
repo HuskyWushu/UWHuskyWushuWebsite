@@ -15,7 +15,7 @@
     }
 
     // Set path to theme index
-    $themeIndex = $gallery->getThemePath(true) . '/index.php';
+    $themeIndex = $gallery->getThemePath(true) . '/gallery.php';
 
     // Initialize the theme
     if (file_exists($themeIndex)) {
