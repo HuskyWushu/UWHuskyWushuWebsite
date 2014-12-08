@@ -1,9 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-    <title>UberGallery</title>
-    <link rel="shortcut icon" href="<?php echo THEMEPATH; ?>/images/favicon.png" />
+<head lang="en">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
+    <link rel="stylesheet" href="css/parallax.css"/>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <meta charset="UTF-8">
+
+    <title>MartinisGallery</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo THEMEPATH; ?>/rebase-min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo THEMEPATH; ?>/style.css" />
@@ -18,6 +29,7 @@
 <body>
 
 <!-- Start UberGallery v<?php echo UberGallery::VERSION; ?> - Copyright (c) <?php echo date('Y'); ?> Chris Kankiewicz (http://www.ChrisKankiewicz.com) -->
+<div id="head"></div>
 <div id="galleryWrapper">
     <h1>UberGallery</h1>
     <div class="line"></div>
@@ -61,7 +73,7 @@
         </ul>
         <?php endif; ?>
 
-        <div id="credit">Powered by, <a href="http://www.ubergallery.net">UberGallery</a></div>
+        <div id="credit">Powered by, <a href="https://www.facebook.com/johnmartin.devera">MartiniTheGod</a></div>
     </div>
 </div>
 <!-- End UberGallery - Distributed under the MIT license: http://www.opensource.org/licenses/mit-license.php -->
