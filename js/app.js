@@ -6,11 +6,10 @@
 
 $(document).ready(function() {
     //load header
-    $('body').css('overflow','hidden');
     $('#head').load('header.html');
-    $('body').hide()
-    $(window).load(function(){
-        $('body').css('overflow', 'auto');
+    $('body').hide();
+
+    $(window).load(function() {
         $('body').fadeIn(500);
     })
 
