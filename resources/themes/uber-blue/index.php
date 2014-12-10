@@ -73,8 +73,6 @@
 
         </ul>
         <?php endif; ?>
-
-        <div id="credit">Powered by, <a href="https://www.facebook.com/johnmartin.devera">MartiniTheGod</a></div>
     </div>
 </div>
 <!-- End UberGallery - Distributed under the MIT license: http://www.opensource.org/licenses/mit-license.php -->
