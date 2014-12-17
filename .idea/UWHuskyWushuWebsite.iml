@@ -10,6 +10,8 @@
     <orderEntry type="library" name="angular" level="application" />
     <orderEntry type="library" name="jquery-latest" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="skrollr" level="application" />
+    <orderEntry type="library" name="jQuery-2.0.0" level="application" />
+    <orderEntry type="library" name="jQuery UI-1.10.2" level="application" />
   </component>
 </module>
-
