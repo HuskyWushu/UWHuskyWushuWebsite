@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-color: #39275B;
+    background-color: #355664;
     color: #333;
     font-family: Arial, Helvetica, sans-serif, Verdana;
     font-size: .8em;
@@ -16,7 +16,7 @@ body {
 }
 
 #galleryWrapper {
-    background-color: #C79900;
+    background-color: #213E4A;
     border-radius: 5px;
     margin: 20px auto;
     padding: 20px;
