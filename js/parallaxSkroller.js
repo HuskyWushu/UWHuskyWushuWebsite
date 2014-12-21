@@ -5,5 +5,7 @@
 "Use Strict"
 
 $(document).ready(function($) {
-    skrollr.init();
+    skrollr.init(function() {
+        smoothScrolling: false
+    });
 });

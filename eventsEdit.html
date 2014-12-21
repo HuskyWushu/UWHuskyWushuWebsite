@@ -15,8 +15,52 @@
         <title>Events</title>
     </head>
 
-    <div id="head" data-top=""></div>
-    <body class="events" id="skrollr-body">
+    <body>
 
+        <div
+                class="parallax-image-wrapper parallax-image-wrapper-100"
+                data-anchor-target="#sakura_con + .gap + #head"
+                data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+                data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+                <div
+                        class="parallax-image parallax-image-100"
+                        style="background-image:url(img/sakura_con.JPG)"
+                        data-anchor-target="#sakura_con + .gap + #head"
+                        data-bottom-top="transform: translated3d(0px, -80%, 0px"
+                        data-top-bottom="transform: translate3d(0px, 80%, 0px)">
+                </div>
+        </div>
+
+        <div
+                class="parallax-image-wrapper parallax-image-wrapper-100"
+                data-anchor-target="#lunar_new_year + .gap + #head"
+                data-bottom-top="transform: translate3d:(0px, 200%, 0px)"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px)">
+
+            <div class="parallax-image parallax-image-100"
+                    style="background-image:url(img/lunar_new_year.jpg)"
+                    data-anchor-target="#lunar_new_year + .gap + #head"
+                    data-bottom-top="transform: translate3d(0px, -80%, 0px)"
+                    data-top-bottom="transform: translate3d(0px, 80%, 0px)">
+            </div>
+        </div>
+
+        <div id="skrollr-body">
+            <div class="gap gap-header" id="head"></div>
+            <div class="content" id="sakura_con">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aperiam blanditiis
+                    consectetur cumque deleniti ea expedita facere iste iure, maxime neque quasi quisquam
+                    repellendus sint, suscipit tempora voluptates. Ut.</p>
+            </div>
+            <div class="gap gap-100" style="background-image:url(img/sakura_con.JPG);"></div>
+            <div class="content" id="lunar_new_year">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aperiam blanditiis
+                    consectetur cumque deleniti ea expedita facere iste iure, maxime neque quasi quisquam
+                    repellendus sint, suscipit tempora voluptates. Ut.</p>
+            </div>
+            <div class="gap gap-100" style="background-image: url(img/lunar_new_year.jpg);"></div>
+
+        </div>
     </body>
 </html>
