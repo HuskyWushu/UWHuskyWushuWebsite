@@ -27,7 +27,8 @@ $(document).ready(function($) {
                 var coords = '50% '+ yPos + 'px';
 
                 $self.css({ backgroundPosition: coords });
-            }
+
+            };
         });
     });
 });
