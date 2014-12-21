@@ -1,101 +1,73 @@
-* {
-    padding:0;
-    margin:0;
+#gap-header {
+    height: 80px;
 }
 
-html, body {
-    height:100%;
+.event {
+    height: calc(100vh - 80px);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.skrollr-desktop body {
-    height:100% !important;
+#event1 {
+    background-image: url("../img/sakura_con.JPG");
+    background-size: cover;
 }
 
-body {
-    font-family:sans-serif;
+#event2 {
+    background-image: url("../img/SIMAC.png");
+    background-size: cover;
 }
 
-p {
-    margin:1em 0;
+#event3 {
+    background-image: url("../img/wushu_collegiates.jpg");
+    background-size: cover;
 }
 
-.parallax-image-wrapper {
-    position:fixed;
-    left:0;
-    width:100%;
-    overflow:hidden;
+#event4 {
+    background-image: url("../img/lunar_new_year.jpg");
+    background-size: cover;
 }
 
-.parallax-image-wrapper-100 {
-    height:100%;
+.content {
+    float: right;
+    background: rgba(255, 255, 255, 0.8) fixed;
+    margin: 10vh 10vh 0;
+    width: 50%;
+    padding: 5%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
 }
 
-.parallax-image {
-    display:none;
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
+#navEvents {
+    width: 50px;
+    height: 165px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    margin-top: -82.5px;
+    z-index: 1;
+    list-style: none;
 }
 
-.parallax-image-100 {
-    height:100%;
-    top:0;
+#navEvents li {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 5px #4b2e83;
+    margin: 13px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
 }
 
-.parallax-image.skrollable-between {
-    display:block;
-}
-
-.no-skrollr .parallax-image-wrapper {
-    display:none !important;
-}
-
-#skrollr-body {
-    height:100%;
-    overflow:visible;
-    position:relative;
-}
-
-.gap {
-    background:transparent center no-repeat;
-    background-size:cover;
-}
-
-.skrollr .gap {
-    background:transparent !important;
-}
-
-.gap-50 {
-    height:50%;
-}
-
-.gap-100 {
-    height:100%;
-}
-
-.header, .content {
-    background:#fff;
-    padding:1em;
-
-    background-color: #0092ef;
-
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-}
-
-.content-full {
-    height:100%;
-}
-
-#done {
-    height:100%;
-}
-
-.gap-header {
-    height:80px;
+#navEvents li:hover, #navBar .current {
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    background-color: rgba(183, 165, 122, 1);
 }

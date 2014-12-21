@@ -6,13 +6,28 @@
 
 $(document).ready(function($) {
     $('#head').load('header.html');
-    var s = skrollr.init({
-        forceHeight: false,
-        smoothScrolling: false,
-        mobileDeceleration: 0.004
+
+    $window = $(window);
+
+    $('[data-type]').each(function() {
+        $(this).data('speed', $(this).attr('data-speed'));
     });
 
-    $(window).scroll(function() {
-        s.refresh();
+    $('section').each(function() {
+        var $self = $(this);
+        var offsetCoords = $self.offset();
+        var topOffset = offsetCoords.top;
+
+        $(window).scroll(function(){
+            if(($window.scrollTop() + $window.height()) > (topOffset) &&
+                ( (topOffset + $self.height()) > $window.scrollTop() ) ) {
+
+                var yPos = -($window.scrollTop() /$self.data('speed'));
+
+                var coords = '50% '+ yPos + 'px';
+
+                $self.css({ backgroundPosition: coords });
+            }
+        });
     });
 });
