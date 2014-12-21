@@ -28,7 +28,16 @@ $(document).ready(function($) {
 
                 $self.css({ backgroundPosition: coords });
 
-            };
+            }
         });
+    });
+
+    $('#navigation > ul > li').on("click", function(eventObject){
+        console.log($(this).attr('href'));
+        eventObject.preventDefault();
+
+        $("body, html").animate({
+            scrollTop: $($(this).attr('href')).offset().top - 80
+        }, 500);
     });
 });
