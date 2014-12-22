@@ -21,10 +21,11 @@ $(document).ready(function($) {
         $(window).scroll(function(){
             if(($window.scrollTop() + $window.height()) > (topOffset) &&
                 ( (topOffset + $self.height()) > $window.scrollTop() ) ) {
+                var yPos = -($window.scrollTop() / $self.data('speed'));
 
-                var yPos = -($window.scrollTop() /$self.data('speed'));
+                console.log(yPos);
 
-                var coords = '50% '+ yPos + 'px';
+                var coords = '50%'+ yPos + 'px';
 
                 $self.css({ backgroundPosition: coords });
 
@@ -38,6 +39,6 @@ $(document).ready(function($) {
 
         $("body, html").animate({
             scrollTop: $($(this).attr('href')).offset().top - 80
-        }, 500);
+        }, 800);
     });
 });

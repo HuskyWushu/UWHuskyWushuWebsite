@@ -8,7 +8,6 @@
     margin: 0;
     width: 100%;
     position: relative;
-    overflow: hidden;
 }
 
 #event1 {
@@ -29,6 +28,8 @@
 #event4 {
     background-image: url("../img/sakura_con.JPG");
     background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 .content {
