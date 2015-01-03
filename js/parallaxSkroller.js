@@ -25,7 +25,7 @@ $(document).ready(function($) {
 
                 console.log(yPos);
 
-                var coords = '50%'+ yPos + 'px';
+                var coords = '100%'+ yPos + 'px';
 
                 $self.css({ backgroundPosition: coords });
 

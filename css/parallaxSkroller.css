@@ -10,26 +10,24 @@
     position: relative;
 }
 
+.background {
+    background-size: auto 1300px;
+ }
+
 #event1 {
     background-image: url("../img/wushu_collegiates.jpg");
-    background-size: cover;
 }
 
 #event2 {
     background-image: url("../img/lunar_new_year.jpg");
-    background-size: cover;
 }
 
 #event3 {
     background-image: url("../img/SIMAC.png");
-    background-size: cover;
 }
 
 #event4 {
     background-image: url("../img/sakura_con.JPG");
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
 }
 
 .content {
