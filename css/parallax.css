@@ -111,3 +111,62 @@ img {
 #history4 {
     background-image: url("../gallery-images/img_2012_4.jpg");
 }
+
+.homepagePhoto, .homepagePhotoAlwaysVisible {
+    max-height: 28%;
+    max-width: 21%;
+    display: inline-block;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.homepagePhotoGroup {
+    text-align: center;
+    padding: 5% 5% 2.5%;
+}
+
+#home1 {
+    background-image: url("../img/background.jpg");
+}
+
+#home2 {
+    background-image: url("../img/homeBackground2.jpg");
+    background-size: auto 1500px;
+}
+
+.home article {
+    top: 50%;
+    left: 50%;
+}
+
+.btn, .btn:focus, .btn:visited {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    background: #4b2e83;
+    color: #ffffff;
+}
+
+.btn:hover, .btn:active {
+    background: #b7a57a;
+    color: #ffffff;
+}
+
+.home #contactButtons {
+    padding: 1em;
+}
+
+.home p {
+    padding: 0%;
+    text-align: center;
+}
+
+.home article {
+    text-align: center;
+}
+
+.home .content {
+    margin-right: 25%;
+}
