@@ -83,14 +83,31 @@
     width: 50%;
 }
 
-.events h2 {
+h2 {
     text-align: center;
     margin-bottom: 3%;
 }
 
-.events img {
+img {
     margin-left: auto;
     margin-right: auto;
     display: block;
     height: auto;
+}
+
+#history1 {
+    background-image: url("../img/2000px-China_blank_map.svg.png");
+    background-size: auto 1750px;
+}
+
+#history2 {
+    background-image: url("../img/Shi_DeRu_and_Shi_DeYang.jpg");
+}
+
+#history3 {
+    background-image: url("../gallery-images/img_2012_8.jpg");
+}
+
+#history4 {
+    background-image: url("../gallery-images/img_2012_4.jpg");
 }
