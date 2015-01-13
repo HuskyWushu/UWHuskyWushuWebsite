@@ -1,46 +1,44 @@
 /**
- * Created by Ivy on 12/6/2014.
- */
+* Created by Ivy on 12/16/2014.
+*/
 
-"use strict";
+"Use Strict"
 
-var dataslide;
+$(document).ready(function($) {
+    $('#head').load('header.html');
 
-jQuery(document).ready(function ($){
-    $(window).stellar();
+    $window = $(window);
 
-    var links = $('#navigation').find('li');
-    var slide = $('.slide');
-    var myWindow = $(window);
-    var htmlbody = $('html,body');
-
-    slide.waypoint(function (event, direction) {
-        dataslide = $(this).attr('data-slide');
-
-        if(direction == 'down') {
-            $('#navigation li[data-slide="' + dataslide +'"]').addClass('current')
-        } else {
-            $('#navigation li[data-slide="' + dataslide +'"]').addClass('current')
-        }
-    }, {offset: 50});
-
-    myWindow.scroll(function() {
-        if(myWindow.scrollTop() == 0) {
-            $('#navigation li[data-slide="1"]').addClass('current');
-            $('#navigation li[data-slide="2"]').removeClass('current');
-        }
+    $('[data-type]').each(function() {
+        $(this).data('speed', $(this).attr('data-speed'));
     });
 
-    function goToByScroll(dataslide) {
-        htmlbody.animate({
-            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top - 75
-        }, 1000, 'easeInOutExpo');
-    }
+    $('.background').each(function() {
+        var $self = $(this);
+        var offsetCoords = $self.offset();
+        var topOffset = offsetCoords.top;
 
-    links.click(function (e) {
-        e.preventDefault();
-        dataslide = $(this).attr('data-slide');
-        goToByScroll(dataslide);
+        $(window).scroll(function(){
+            if(($window.scrollTop() + $window.height()) > (topOffset) &&
+                ( (topOffset + $self.height()) > $window.scrollTop() ) ) {
+                var yPos = -($window.scrollTop() / $self.data('speed'));
+
+                console.log(yPos);
+
+                var coords = '100%'+ yPos + 'px';
+
+                $self.css({ backgroundPosition: coords });
+
+            }
+        });
+    });
+
+    $('#navigation > ul > li').on("click", function(eventObject){
+        console.log($(this).attr('href'));
+        eventObject.preventDefault();
+
+        $("body, html").animate({
+            scrollTop: $($(this).attr('href')).offset().top - 80
+        }, 800);
     });
 });
-

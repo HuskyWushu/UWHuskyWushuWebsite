@@ -7,10 +7,11 @@
 $(document).ready(function() {
     //load header
     $('#head').load('header.html');
-    $('body').hide();
 
-    $(window).load(function() {
-        $('body').fadeIn(500);
-    })
+    //$('body').hide();
+    //
+    //$(window).load(function() {
+    //    $('body').fadeIn(500);
+    //})
 
 });

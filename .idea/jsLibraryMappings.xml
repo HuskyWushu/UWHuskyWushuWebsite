@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/js/app.js" libraries="{HTML, HTML5 / EcmaScript 5}" />
     <file url="file://$PROJECT_DIR$/js/gallery.js" libraries="{HTML5 / EcmaScript 5}" />
     <file url="file://$PROJECT_DIR$/js/gallery_isotope.js" libraries="{HTML5 / EcmaScript 5}" />
-    <file url="file://$PROJECT_DIR$/js/parallaxSkroller.js" libraries="{HTML, HTML5 / EcmaScript 5, jQuery UI-1.10.2, jQuery-2.0.0, skrollr}" />
+    <file url="file://$PROJECT_DIR$/js/parallax.js" libraries="{HTML, HTML5 / EcmaScript 5, jQuery UI-1.10.2, jQuery-2.0.0, skrollr}" />
     <excludedPredefinedLibrary name="HTML" />
     <excludedPredefinedLibrary name="HTML5 / EcmaScript 5" />
   </component>
