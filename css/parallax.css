@@ -1,3 +1,4 @@
+/*------All Pages------*/
 #gap-header {
     height: 80px;
 }
@@ -14,22 +15,6 @@
     background-size: auto 1300px;
  }
 
-.events #event1 {
-    background-image: url("../img/wushu_collegiates.jpg");
-}
-
-.events #event2 {
-    background-image: url("../img/lunar_new_year.jpg");
-}
-
-.events #event3 {
-    background-image: url("../img/SIMAC.png");
-}
-
-.events #event4 {
-    background-image: url("../img/sakura_con.JPG");
-}
-
 .content {
     float: right;
     background: rgba(255, 255, 255, 0.8) fixed;
@@ -40,6 +25,18 @@
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: auto;
 }
 
 #navEvents {
@@ -71,47 +68,7 @@
     background-color: rgba(183, 165, 122, 1);
 }
 
-.events #logo2, #logo4 {
-    width: 25%;
-}
-
-.events #logo1 {
-    width: 40%;
-}
-
-.events #logo3 {
-    width: 50%;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 3%;
-}
-
-img {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    height: auto;
-}
-
-#history1 {
-    background-image: url("../img/2000px-China_blank_map.svg.png");
-    background-size: auto 1750px;
-}
-
-#history2 {
-    background-image: url("../img/Shi_DeRu_and_Shi_DeYang.jpg");
-}
-
-#history3 {
-    background-image: url("../gallery-images/img_2012_8.jpg");
-}
-
-#history4 {
-    background-image: url("../gallery-images/img_2012_4.jpg");
-}
-
+/*------Home------*/
 .homepagePhoto, .homepagePhotoAlwaysVisible {
     max-height: 28%;
     max-width: 21%;
@@ -126,6 +83,24 @@ img {
     padding: 5% 5% 2.5%;
 }
 
+.home p {
+    padding: 0%;
+    text-align: center;
+}
+
+.home article {
+    text-align: center;
+}
+
+.home .content {
+    margin-right: 25%;
+}
+
+.home article {
+    top: 50%;
+    left: 50%;
+}
+
 #home1 {
     background-image: url("../img/background.jpg");
 }
@@ -133,11 +108,6 @@ img {
 #home2 {
     background-image: url("../img/homeBackground2.jpg");
     background-size: auto 1500px;
-}
-
-.home article {
-    top: 50%;
-    left: 50%;
 }
 
 .btn, .btn:focus, .btn:visited {
@@ -158,15 +128,50 @@ img {
     padding: 1em;
 }
 
-.home p {
-    padding: 0%;
-    text-align: center;
+/*------Events------*/
+.events #event1 {
+    background-image: url("../img/wushu_collegiates.jpg");
 }
 
-.home article {
-    text-align: center;
+.events #event2 {
+    background-image: url("../img/lunar_new_year.jpg");
 }
 
-.home .content {
-    margin-right: 25%;
+.events #event3 {
+    background-image: url("../img/SIMAC.png");
 }
+
+.events #event4 {
+    background-image: url("../img/sakura_con.JPG");
+}
+
+.events #logo2, #logo4 {
+    width: 25%;
+}
+
+.events #logo1 {
+    width: 40%;
+}
+
+.events #logo3 {
+    width: 50%;
+}
+
+/*------History------*/
+#history1 {
+    background-image: url("../img/2000px-China_blank_map.svg.png");
+    background-size: auto 1750px;
+}
+
+#history2 {
+    background-image: url("../img/Shi_DeRu_and_Shi_DeYang.jpg");
+}
+
+#history3 {
+    background-image: url("../gallery-images/img_2012_8.jpg");
+}
+
+#history4 {
+    background-image: url("../gallery-images/img_2012_4.jpg");
+}
+
