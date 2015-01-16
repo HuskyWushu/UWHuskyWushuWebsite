@@ -5,8 +5,6 @@
 "Use Strict"
 
 $(document).ready(function($) {
-    $('#head').load('header.html');
-
     $window = $(window);
 
     $('[data-type]').each(function() {
