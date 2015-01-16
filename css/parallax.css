@@ -14,19 +14,19 @@
     background-size: auto 1300px;
  }
 
-#event1 {
+.events #event1 {
     background-image: url("../img/wushu_collegiates.jpg");
 }
 
-#event2 {
+.events #event2 {
     background-image: url("../img/lunar_new_year.jpg");
 }
 
-#event3 {
+.events #event3 {
     background-image: url("../img/SIMAC.png");
 }
 
-#event4 {
+.events #event4 {
     background-image: url("../img/sakura_con.JPG");
 }
 
