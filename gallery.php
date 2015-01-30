@@ -1,6 +1,6 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-
+<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 <?php
 
     // Include the UberGallery class
