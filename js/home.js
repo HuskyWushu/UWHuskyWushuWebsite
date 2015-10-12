@@ -35,12 +35,13 @@
         return(currTime);
     }
 
+    //updates up to 3 events if they are on the google calendar
     function updateEvents() {
         var events = JSON.parse(this.responseText);
-        for (i = 0; i < 2; i++) {
-            document.getElementById("event" + i.toString()).innerHTML = events.items[i].summary + " : " + events.items[i].start.dateTime.substring(0, 10);
+        for (var i = 0; i < 2 && events.items[i]; i++) {
+            document.getElementById("event" + i).innerHTML = events.items[i].summary + " : " + events.items[i].start.dateTime.substring(0, 10);
         }
-      
+
     }
 
     function ajaxFailure(exception) {
