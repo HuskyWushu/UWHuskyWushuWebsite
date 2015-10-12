@@ -9,21 +9,21 @@
         var CAL_API = "https://www.googleapis.com/calendar/v3/calendars/";
         var CAL_ID = "3218n1qbhtm3fe5gims1fgciso@group.calendar.google.com/";
         var API_KEY = "AIzaSyC59NOWzcnm5DCri2-BF9gftvgSq_8isUc";
-        var event1 = document.getElementById("event1");
-        var event2 = document.getElementById("event2");
-        var event3 = document.getElementById("event3");
 
 
         var ajax = new XMLHttpRequest();
         ajax.onload = updateEvents;
         ajax.onerror = ajaxFailure;
         var startTime =  getCurrentTime();
+        // reference https://developers.google.com/google-apps/calendar/v3/reference/events/list
         var url = CAL_API + CAL_ID + "events?maxResults=3&" +
         "orderBy=startTime&singleEvents=true&timeMin=" + encodeURIComponent(startTime) +"&key=" + API_KEY;
         ajax.open("GET",url, true);
         ajax.send();
     }
 
+    // Returns the current time. in YYYY-MM-DDTHH:MM:SS-08:00 format
+    // Used to set the current date as the lower bound for events to return
     function getCurrentTime() {
         var currentdate = new Date();
         var currTime = currentdate.getFullYear() + "-"
@@ -35,15 +35,17 @@
         return(currTime);
     }
 
-    //updates up to 3 events if they are on the google calendar
+    //Displays up to 3 events on index.html if they are on the google calendar
     function updateEvents() {
         var events = JSON.parse(this.responseText);
         for (var i = 0; i < 2 && events.items[i]; i++) {
-            document.getElementById("event" + i).innerHTML = events.items[i].summary + " : " + events.items[i].start.dateTime.substring(0, 10);
+            var eventTime = events.items[i].start.dateTime.substring(0, 10);
+            document.getElementById("event" + i).innerHTML = events.items[i].summary + " : " + eventTime;
         }
 
     }
 
+    //Displays Error messages for AJAX
     function ajaxFailure(exception) {
         alert("Error making Ajax request:" +
             "\n\nServer status:\n" + this.status + " " + this.statusText +
