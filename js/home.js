@@ -13,11 +13,7 @@
         var event2 = document.getElementById("event2");
         var event3 = document.getElementById("event3");
 
-        if (event1 && event2 && event3) {
-            event1.innerHTML = "test1";
-            event2.innerHTML = "foo";
-            event3.innerHTML = "bar";
-        }
+
         var ajax = new XMLHttpRequest();
         ajax.onload = updateEvents;
         ajax.onerror = ajaxFailure;
