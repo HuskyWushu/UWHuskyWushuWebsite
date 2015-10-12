@@ -40,9 +40,18 @@
         var events = JSON.parse(this.responseText);
         for (var i = 0; i < 2 && events.items[i]; i++) {
             var eventTime = events.items[i].start.dateTime.substring(0, 10);
-            document.getElementById("event" + i).innerHTML = events.items[i].summary + " : " + eventTime;
+            document.getElementById("event" + i).innerHTML = events.items[i].summary + " : " + eventTimeString(eventTime);
         }
+    }
+    //Converts YYYY-MM-DD into Jan 01, 2015 format
+    function eventTimeString(eventTime) {
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var year = eventTime.substring(0,4);
+        var month = eventTime.substring(5,7);
+        var day = eventTime.substring(8,10);
 
+        month = months[parseInt(month) - 1];
+        return month + " " + day + ", " + year;
     }
 
     //Displays Error messages for AJAX
