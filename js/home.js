@@ -37,9 +37,10 @@
 
     function updateEvents() {
         var events = JSON.parse(this.responseText);
-        event1.innerHTML = events.items[0].summary + " : " + events.items[0].start.dateTime.substring(0, 10);
-        event2.innerHTML = events.items[1].summary + " : " + events.items[1].start.dateTime.substring(0, 10);
-        event3.innerHTML = events.items[2].summary + " : " + events.items[2].start.dateTime.substring(0, 10);
+        for (i = 0; i < 2; i++) {
+            document.getElementById("event" + i.toString()).innerHTML = events.items[i].summary + " : " + events.items[i].start.dateTime.substring(0, 10);
+        }
+      
     }
 
     function ajaxFailure(exception) {
